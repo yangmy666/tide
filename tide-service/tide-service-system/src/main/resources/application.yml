@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: tide-service-system
+  datasource:
+    url: jdbc:p6spy:mysql://localhost/cloud_music?serverTimezone=GMT%2B8
+    username: root
+    password: 1
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  boot:
+#    admin:
+#      client:
+#        #这里配置admin server 的地址
+#        url: http://47.94.147.204:2333
+##开放端点用于SpringBoot Admin的监控
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+
+

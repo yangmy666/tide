@@ -1,0 +1,16 @@
+server:
+  port: 8866
+spring:
+  application:
+    name: tide-service-demo
+  redis:
+    host: 47.94.147.204
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 100
+        max-wait: -1
+        max-idle: 50
+        min-idle: 8
+

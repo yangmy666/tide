@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.yangmy.tide.common.redis.config.RedisConfig
+
+
