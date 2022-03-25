@@ -11,19 +11,16 @@ import java.lang.annotation.*;
 public @interface FruitProvider {
     /**
      * 供应商编号
-     * @return
      */
-    public int id() default -1;
+    int id() default -1;
 
     /**
      * 供应商名称
-     * @return
      */
-    public String name() default "";
+    String name() default "";
 
     /**
      * 供应商地址
-     * @return
      */
-    public String address() default "";
+    String address() default "";
 }
