@@ -22,8 +22,19 @@ public class ResponseResultInterceptor implements HandlerInterceptor {
             Method method=handlerMethod.getMethod();
             //判断controller类上是否加了@ResponseResult
             if(clazz.isAnnotationPresent(ResponseResult.class)){
+                ResponseResult responseResult=clazz.getAnnotation(ResponseResult.class);
+                boolean isResult=true;
+                String[] exclude=responseResult.exclude();
+                if(exclude.length>0){
+                    for (String s : exclude) {
+                        if (method.getName().equals(s)) {
+                            isResult = false;
+                            break;
+                        }
+                    }
+                }
                 //添加包装返回结果标记
-                ResponseResultAdvice.isResult.set(true);
+                ResponseResultAdvice.isResult.set(isResult);
             }
             //判断controller方法上是否加了@ResponseResult
             else if(method.isAnnotationPresent(ResponseResult.class)){

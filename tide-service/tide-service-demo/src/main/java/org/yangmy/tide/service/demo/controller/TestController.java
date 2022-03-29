@@ -9,9 +9,9 @@ import org.yangmy.tide.service.demo.entity.B;
  * @author YangMingYang
  */
 @RestController
+@ResponseResult(exclude = {"t2"})
 public class TestController {
 
-    @ResponseResult
     @GetMapping("/t1")
     public B t1(){
         B b=new B();
@@ -21,7 +21,6 @@ public class TestController {
         return b;
     }
 
-    @ResponseResult
     @GetMapping("/t2")
     public String t2(){
         return "t2";
@@ -32,7 +31,6 @@ public class TestController {
         return "t3";
     }
 
-    @ResponseResult
     @GetMapping("/t4")
     public int t4(){
         return 4/0;
