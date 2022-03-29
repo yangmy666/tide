@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.yangmy.tide.common.result.ResponseResultInterceptor,\
+  org.yangmy.tide.common.result.WebMvcConfig,\
+  org.yangmy.tide.common.result.ResponseResultAdvice
+
+

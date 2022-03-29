@@ -18,6 +18,7 @@
         <module>tide-common-p6spy</module>
         <module>tide-common-redis</module>
         <module>tide-common-demo</module>
+        <module>tide-common-result</module>
     </modules>
 
 </project>

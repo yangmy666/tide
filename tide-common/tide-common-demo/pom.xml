@@ -12,10 +12,36 @@
     <artifactId>tide-common-demo</artifactId>
 
     <dependencies>
+
+        <!--<dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-p6spy</artifactId>
+            <version>${tide-version}</version>
+        </dependency>-->
+
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+
+        <!--<dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.9</version>
-        </dependency>
+        </dependency>-->
+
     </dependencies>
 </project>
