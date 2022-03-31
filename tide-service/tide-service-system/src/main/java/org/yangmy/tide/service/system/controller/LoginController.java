@@ -12,6 +12,7 @@ import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.common.result.Status;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
+import org.yangmy.tide.service.system.entity.valid.RegisterGroup;
 import org.yangmy.tide.service.system.service.ISysUserService;
 import org.yangmy.tide.service.system.utils.SecurityUtils;
 
@@ -41,21 +42,26 @@ public class LoginController {
             String token=SecurityUtils.generateToken();
             String key = "accessToken" + ":" + userId;
             stringRedisTemplate.opsForValue().set(key,token);
-            return Result.success(Status.LOGIN_SUCCESS,token);
+            return Result.success(token);
         }
         return Result.FAILURE(Status.LOGIN_FAILURE);
     }
 
     @PostMapping("/logout")
-    public void logout(){
+    public Result logout(){
         Long userId=SecurityUtils.getUserInfo().getId();
         if(userId!=null){
             stringRedisTemplate.delete("accessToken" + ":"+ userId);
         }
+        return Result.success();
     }
 
     @PostMapping("/register")
-    public void register(SysUser sysUser){
-
+    public Result register(@Validated(RegisterGroup.class) SysUser sysUser){
+        boolean res=sysUserService.save(sysUser);
+        if(res){
+            return Result.success();
+        }
+        return Result.FAILURE(Status.INTERNAL_ERROR);
     }
 }

@@ -23,37 +23,20 @@ public class Result{
         this.data=data;
     }
 
-    public Result(Status status,String message, Object data){
-        this.code=status.code();
-        this.message=message;
-        this.data=data;
+    public static Result success(){
+        return new Result(Status.OK);
     }
 
-    /**
-     * 成功
-     */
     public static Result success(Object data){
         return new Result(Status.OK,data);
     }
 
-    /**
-     * 成功
-     */
-    public static Result success(Status status,Object data){
-        return new Result(status,data);
+    public static Result FAILURE(Status status){
+        return new Result(status);
     }
 
-    /**
-     * 失败
-     */
     public static Result FAILURE(Status status,Object data){
         return new Result(status,data);
     }
 
-    /**
-     * 失败
-     */
-    public static Result FAILURE(Status status){
-        return new Result(status);
-    }
 }
