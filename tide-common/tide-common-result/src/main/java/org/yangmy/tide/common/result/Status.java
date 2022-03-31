@@ -6,7 +6,9 @@ package org.yangmy.tide.common.result;
 public enum Status {
 
     SUCCESS(200,"处理成功"),
-    ERROR(500,"服务器内部错误");
+    VALID(406,"参数校验错误"),
+    FAILURE(500,"服务器内部错误");
+
 
     private final Integer code;
     private final String message;

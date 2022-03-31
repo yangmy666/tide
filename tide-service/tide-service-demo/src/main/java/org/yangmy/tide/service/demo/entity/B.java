@@ -1,6 +1,7 @@
 package org.yangmy.tide.service.demo.entity;
 
 import lombok.Data;
+import org.yangmy.tide.service.demo.entity.dto.ADto;
 
 /**
  * @描述：
@@ -13,4 +14,5 @@ public class B {
     private int id;
     private String name;
     private boolean deFlag;
+    private ADto aDto;
 }
