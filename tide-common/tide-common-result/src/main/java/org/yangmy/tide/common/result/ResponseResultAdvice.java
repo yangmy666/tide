@@ -36,10 +36,10 @@ public class ResponseResultAdvice implements ResponseBodyAdvice<Object> {
                 bindingResult.getFieldErrors().forEach((item)->{
                     map.put(item.getField(),item.getDefaultMessage());
                 });
-                return Result.failure(Status.VALID,map);
+                return Result.FAILURE(Status.VALID,map);
             }
             Throwable e=(Throwable)body;
-            return Result.ERROR(e.getMessage());
+            return Result.FAILURE(Status.INTERNAL_ERROR,e.getMessage());
         }
         return Result.success(body);
     }

@@ -1,14 +1,32 @@
 server:
   port: 8080
+  servlet:
+    context-path: /system
 spring:
   application:
     name: tide-service-system
   datasource:
-    url: jdbc:p6spy:mysql://localhost/cloud_music?serverTimezone=GMT%2B8
+    url: jdbc:p6spy:mysql://47.94.147.204:3306/tide-system?serverTimezone=GMT%2B8
     username: root
-    password: 1
+    password: mysqlyyds
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-
+  redis:
+    host: 47.94.147.204
+    port: 6379
+    password: 123456
+mybatis-plus:
+  type-aliases-package: org.yangmy.tide.service.**.entity
+  configuration:
+    # 自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+  global-config:
+    db-config:
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      id-type: ASSIGN_UUID
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      # 逻辑已删除值
+      logicDeleteValue: 1
 
 
 

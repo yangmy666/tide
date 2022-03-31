@@ -30,23 +30,30 @@ public class Result{
     }
 
     /**
-     * 处理成功
+     * 成功
      */
     public static Result success(Object data){
-        return new Result(Status.SUCCESS,data);
+        return new Result(Status.OK,data);
     }
 
     /**
-     * 处理失败
+     * 成功
      */
-    public static Result ERROR(Object data){
-        return new Result(Status.FAILURE,data);
-    }
-
-    /**
-     * 处理失败
-     */
-    public static Result failure(Status status,Object data){
+    public static Result success(Status status,Object data){
         return new Result(status,data);
+    }
+
+    /**
+     * 失败
+     */
+    public static Result FAILURE(Status status,Object data){
+        return new Result(status,data);
+    }
+
+    /**
+     * 失败
+     */
+    public static Result FAILURE(Status status){
+        return new Result(status);
     }
 }
