@@ -29,18 +29,10 @@
     <properties>
         <tide-version>0.0.1-SNAPSHOT</tide-version>
         <java.version>11</java.version>
-        <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
-            <!-- sql性能分析插件 -->
-            <dependency>
-                <groupId>p6spy</groupId>
-                <artifactId>p6spy</artifactId>
-                <version>${p6spy.version}</version>
-            </dependency>
 
         </dependencies>
     </dependencyManagement>
