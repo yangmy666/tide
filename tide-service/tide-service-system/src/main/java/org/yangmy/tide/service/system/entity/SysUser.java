@@ -26,10 +26,10 @@ public class SysUser implements Serializable {
     @TableId("id")
     private Long id;
 
-    @NotBlank(groups = {LoginGroup.class,RegisterGroup.class})
+    @NotBlank(message = "用户名不能为空",groups = {LoginGroup.class,RegisterGroup.class})
     private String username;
 
-    @NotBlank(groups = {LoginGroup.class,RegisterGroup.class})
+    @NotBlank(message = "密码不能为空",groups = {LoginGroup.class,RegisterGroup.class})
     private String password;
 
 }
