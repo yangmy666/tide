@@ -7,10 +7,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.yangmy.tide.service.system.entity.SysUser;
+import org.yangmy.tide.common.security.TokenUtils;
+import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 @SpringBootTest
 class TideSystemApplicationTests {
@@ -22,12 +25,23 @@ class TideSystemApplicationTests {
 
     @Test
     void contextLoads(){
-        SysUser sysUser=new SysUser();
-        sysUser.setId(2L);
-        sysUser.setUsername("aaa");
-        sysUser.setPassword(null);
-        String token= "cs";
+        UserInfo userInfo=new UserInfo();
+        userInfo.setId(2L);
+        userInfo.setUsername("ymy");
+        List<String> list=new ArrayList<>();
+        list.add("code1");
+        list.add("code2");
+        userInfo.setCodeList(list);
+        String token=TokenUtils.generateToken(userInfo);
         System.out.println(token);
+        String sessionId=TokenUtils.parseSessionId(token);
+        System.out.println(sessionId);
+        UserInfo u=TokenUtils.parseUserInfo(token);
+        System.out.println("id:"+u.getId()+" username:"+u.getUsername());
+        List<String> list1=u.getCodeList();
+        for (String s : list1) {
+            System.out.println(s);
+        }
     }
 
     @Test

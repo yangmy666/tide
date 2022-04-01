@@ -1,6 +1,5 @@
 package org.yangmy.tide.service.system.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,9 @@ import org.yangmy.tide.service.system.mapper.SysPermissionMapper;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author YangMingYang
@@ -48,11 +49,13 @@ public class LoginController {
             //查询用户拥有的权限
             List<String> codeList=sysPermissionMapper.selectPermissionCodeByUserId(user.getId());
             userInfo.setCodeList(codeList);
-            JSONObject token= TokenUtils.generateToken(userInfo);
-            String key = "accessToken" + ":" + user.getId();
-            String value=token.getObject("sessionId",String.class);
-            stringRedisTemplate.opsForValue().set(key,value);
-            return Result.success(token);
+            String token=TokenUtils.generateToken(userInfo);
+            String key = "session" + ":" + user.getId();
+            stringRedisTemplate.opsForValue().set(key, TokenUtils.parseSessionId(token));
+            Map<String,Object> map=new HashMap<>();
+            map.put("userInfo",userInfo);
+            map.put("token",token);
+            return Result.success(map);
         }
         return Result.FAILURE(Status.LOGIN_FAILURE);
     }
@@ -61,8 +64,8 @@ public class LoginController {
     public Result logout(HttpServletRequest request){
         String token=request.getHeader("accessToken");
         Long userId=TokenUtils.parseUserInfo(token).getId();
-        String key = "accessToken" + ":" + userId;
-        stringRedisTemplate.delete("accessToken"+":"+key);
+        String key = "session" + ":" + userId;
+        stringRedisTemplate.delete("session"+":"+key);
         return Result.success();
     }
 

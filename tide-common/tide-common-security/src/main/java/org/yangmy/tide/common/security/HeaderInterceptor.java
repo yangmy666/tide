@@ -1,5 +1,6 @@
 package org.yangmy.tide.common.security;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -29,41 +30,46 @@ public class HeaderInterceptor implements HandlerInterceptor {
         if (handler instanceof HandlerMethod){
             HandlerMethod handlerMethod=(HandlerMethod) handler;
             Method method=handlerMethod.getMethod();
-            Class<?> clazz=method.getDeclaringClass();
             //获取请求头的token
-            String token=request.getHeader("accessToken");
+            String token=request.getHeader("access-token");
             //判断当前要访问的接口是否需要权限
-            if(clazz.isAnnotationPresent(PreAuth.class)){
+            if(method.isAnnotationPresent(PreAuth.class)){
                 //验证token是否有效
-                if(token.equals("")){
+                if(token==null||token.equals("")){
                     //token为空
-                    response.getWriter().print(Result.FAILURE(Status.UNAUTHORIZED));
+                    String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
+                    response.getWriter().write(result);
                     return false;
                 }
                 try {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
-                    String sessionId=strRedisTemplate.opsForValue().get("accessToken" + ":" +userId);
+                    String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
+                        String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
+                        response.getWriter().write(result);
                         return false;
                     }
                 }catch (Exception e){
+                    String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
+                    response.getWriter().write(result);
                     return false;
                 }
 
                 //获取接口注解上所允许的权限
-                PreAuth preAuth=clazz.getAnnotation(PreAuth.class);
+                PreAuth preAuth=method.getAnnotation(PreAuth.class);
                 String code=preAuth.value();
                 //判断是否有权访问
                 List<String> codeList=TokenUtils.parseUserInfo(token).getCodeList();
-                boolean unAuthorized=true;
+                boolean notPermission=true;
                 for (String code1 : codeList) {
                     if (code1.equals(code)) {
-                        unAuthorized = false;
+                        notPermission = false;
                         break;
                     }
                 }
-                if(unAuthorized){
-                    response.getWriter().print(Result.FAILURE(Status.UNAUTHORIZED));
+                if(notPermission){
+                    String result= JSON.toJSONString(Result.FAILURE(Status.NOT_PERMISSION));
+                    response.getWriter().write(result);
                     return false;
                 }
             }
