@@ -19,6 +19,7 @@
         <module>tide-common-redis</module>
         <module>tide-common-demo</module>
         <module>tide-common-result</module>
+        <module>tide-common-security</module>
     </modules>
 
 </project>

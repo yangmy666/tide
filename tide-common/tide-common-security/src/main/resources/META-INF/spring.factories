@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.yangmy.tide.common.security.HeaderInterceptor,\
+  org.yangmy.tide.common.security.WebMvcConfig

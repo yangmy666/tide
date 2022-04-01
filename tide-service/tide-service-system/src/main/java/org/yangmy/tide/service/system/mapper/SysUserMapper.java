@@ -1,5 +1,6 @@
 package org.yangmy.tide.service.system.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.yangmy.tide.service.system.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author YangMingYang
  * @since 2022-03-31
  */
+@Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
 }

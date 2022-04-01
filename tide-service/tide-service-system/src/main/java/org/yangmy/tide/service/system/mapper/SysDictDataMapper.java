@@ -1,7 +1,8 @@
 package org.yangmy.tide.service.system.mapper;
 
-import org.yangmy.tide.service.system.entity.SysDictData;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.yangmy.tide.service.system.entity.SysDictData;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author YangMingYang
  * @since 2022-03-31
  */
+@Mapper
 public interface SysDictDataMapper extends BaseMapper<SysDictData> {
 
 }

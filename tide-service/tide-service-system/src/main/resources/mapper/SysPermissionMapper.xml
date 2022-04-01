@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yangmy.tide.service.system.mapper.SysPermissionMapper">
+    <select id="selectPermissionCodeByUserId" resultType="string">
+        select p.code from sys_permission p where p.id in(
+            select gp.permission_id from sys_group_permission gp where gp.group_id in(
+                select rg.group_id from sys_role_group rg where rg.role_id in (
+                    select ur.role_id from sys_user_role ur where ur.user_id=#{userId}
+                )
+            )
+        )
+    </select>
+</mapper>

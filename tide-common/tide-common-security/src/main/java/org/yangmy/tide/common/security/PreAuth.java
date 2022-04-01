@@ -1,4 +1,4 @@
-package org.yangmy.tide.service.system.utils;
+package org.yangmy.tide.common.security;
 
 import java.lang.annotation.*;
 
@@ -11,5 +11,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PreAuth {
 
-    String[] code();
+    String value() default "";
 }

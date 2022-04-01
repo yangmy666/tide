@@ -2,7 +2,6 @@ package org.yangmy.tide.service.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.yangmy.tide.common.result.ResponseResult;
 import org.yangmy.tide.service.demo.entity.B;
 import org.yangmy.tide.service.demo.entity.dto.ADto;
 
@@ -12,7 +11,6 @@ import javax.validation.Valid;
  * @author YangMingYang
  */
 @RestController
-@ResponseResult(exclude = {"t2","t4"})
 public class TestController {
 
     @GetMapping("/t1")
