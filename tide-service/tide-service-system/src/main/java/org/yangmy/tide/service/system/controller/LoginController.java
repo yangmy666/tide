@@ -5,8 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.common.result.Status;
@@ -15,6 +15,7 @@ import org.yangmy.tide.service.system.entity.valid.LoginGroup;
 import org.yangmy.tide.service.system.entity.valid.RegisterGroup;
 import org.yangmy.tide.service.system.service.ISysUserService;
 import org.yangmy.tide.service.system.utils.SecurityUtils;
+import org.yangmy.tide.service.system.utils.TokenUtils;
 
 import java.util.List;
 
@@ -30,18 +31,16 @@ public class LoginController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @GetMapping("/login")
-    public Result login(@Validated(LoginGroup.class) SysUser sysUser){
+    @PostMapping("/login")
+    public Result login(@RequestBody @Validated(LoginGroup.class) SysUser sysUser) throws Exception {
         Wrapper<SysUser> queryWrapper=new QueryWrapper<>(sysUser);
         List<SysUser> list=sysUserService.list(queryWrapper);
         if(list.size()==1){
-            Long userId=null;
-            for (SysUser user : list) {
-                userId=user.getId();
-            }
-            String token=SecurityUtils.generateToken();
-            String key = "accessToken" + ":" + userId;
-            stringRedisTemplate.opsForValue().set(key,token);
+            SysUser user=list.get(0);
+            String token= TokenUtils.generateToken(user);
+            String key = "accessToken" + ":" + user.getId();
+            //以userId为key,tokenId为value存入redis
+            stringRedisTemplate.opsForValue().set(key, TokenUtils.parseId(token));
             return Result.success(token);
         }
         return Result.FAILURE(Status.LOGIN_FAILURE);
@@ -57,11 +56,11 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public Result register(@Validated(RegisterGroup.class) SysUser sysUser){
+    public Result register(@RequestBody @Validated(RegisterGroup.class) SysUser sysUser){
         boolean res=sysUserService.save(sysUser);
         if(res){
             return Result.success();
         }
-        return Result.FAILURE(Status.INTERNAL_ERROR);
+        return Result.FAILURE(Status.ERROR);
     }
 }

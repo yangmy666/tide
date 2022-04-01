@@ -30,7 +30,7 @@ public class ExceptionControllerAdvice {
     @ExceptionHandler(value= Throwable.class)
     public Result handleException(Throwable e){
         log.error("服务器内部错误{}，异常类型：{}",e.getMessage(),e.getClass());
-        return Result.FAILURE(Status.INTERNAL_ERROR,e.getMessage());
+        return Result.FAILURE(Status.ERROR,e.getMessage());
     }
 
 }

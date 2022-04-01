@@ -2,20 +2,19 @@ package org.yangmy.tide.service.system.utils;
 
 import org.yangmy.tide.service.system.entity.SysUser;
 
-import java.util.UUID;
-
 /**
  * @author YangMingYang
  * @since 2022-03-31
  */
 public class SecurityUtils {
 
-    public static String generateToken(){
-        return UUID.randomUUID().toString();
-    }
+    private static ThreadLocal<SysUser> userInfo=new ThreadLocal<>();
 
     public static SysUser getUserInfo(){
-        //todo
-        return new SysUser();
+        return userInfo.get();
+    }
+
+    public static void setUserInfo(SysUser sysUser){
+        userInfo.set(sysUser);
     }
 }

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
 import java.util.Collections;
@@ -21,7 +22,12 @@ class TideSystemApplicationTests {
 
     @Test
     void contextLoads(){
-        stringRedisTemplate.opsForValue().set("accessToken:a","A");
+        SysUser sysUser=new SysUser();
+        sysUser.setId(2L);
+        sysUser.setUsername("aaa");
+        sysUser.setPassword(null);
+        String token= "cs";
+        System.out.println(token);
     }
 
     @Test
@@ -38,13 +44,11 @@ class TideSystemApplicationTests {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, "D://m/mapper")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("sys_dict_data"); // 设置需要生成的表名
+                    builder.addInclude("sys_role"); // 设置需要生成的表名
                     //.addTablePrefix("demo_"); // 设置过滤表前缀
                 })
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
                 .execute();
     }
-
-
 
 }
