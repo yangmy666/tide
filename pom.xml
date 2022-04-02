@@ -27,14 +27,8 @@
     </modules>
 
     <properties>
-        <tide-version>0.0.1-SNAPSHOT</tide-version>
         <java.version>11</java.version>
+        <tide-version>0.0.1-SNAPSHOT</tide-version>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-
-        </dependencies>
-    </dependencyManagement>
 
 </project>
