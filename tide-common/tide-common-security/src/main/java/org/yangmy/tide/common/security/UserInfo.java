@@ -9,11 +9,11 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
+ * <p>用户信息包装类</p>
  * @author YangMingYang
  * @since 2022-03-31
  */
 @Data
-//不序列化null值
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserInfo implements Serializable {
 
@@ -22,8 +22,8 @@ public class UserInfo implements Serializable {
     //用string的方式序列化long类型解决精度问题
     @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
-
+    //用户名
     private String username;
-    //权限
+    //用户拥有的所有权限编码
     private List<String> codeList;
 }

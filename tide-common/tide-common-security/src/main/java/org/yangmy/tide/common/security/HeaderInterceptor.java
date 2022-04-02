@@ -1,13 +1,10 @@
 package org.yangmy.tide.common.security;
 
-import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.yangmy.tide.common.result.Result;
-import org.yangmy.tide.common.result.Status;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +21,8 @@ public class HeaderInterceptor implements HandlerInterceptor {
 
     @Autowired
     private StringRedisTemplate strRedisTemplate;
+    @Autowired
+    private TideSecurityConfiguration configuration;
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
@@ -31,27 +30,24 @@ public class HeaderInterceptor implements HandlerInterceptor {
             HandlerMethod handlerMethod=(HandlerMethod) handler;
             Method method=handlerMethod.getMethod();
             //获取请求头的token
-            String token=request.getHeader("access-token");
+            String token=request.getHeader(configuration.getTokenHeader());
             //判断当前要访问的接口是否需要权限
             if(method.isAnnotationPresent(PreAuth.class)){
                 //验证token是否有效
                 if(token==null||token.equals("")){
                     //token为空
-                    String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
-                    response.getWriter().write(result);
+                    response.getWriter().write("未授权");
                     return false;
                 }
                 try {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
                     String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
-                        String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
-                        response.getWriter().write(result);
+                        response.getWriter().write("未授权");
                         return false;
                     }
                 }catch (Exception e){
-                    String result= JSON.toJSONString(Result.FAILURE(Status.UN_AUTHORIZED));
-                    response.getWriter().write(result);
+                    response.getWriter().write("未授权");
                     return false;
                 }
 
@@ -68,8 +64,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
                     }
                 }
                 if(notPermission){
-                    String result= JSON.toJSONString(Result.FAILURE(Status.NOT_PERMISSION));
-                    response.getWriter().write(result);
+                    response.getWriter().write("权限不足");
                     return false;
                 }
             }

@@ -3,14 +3,13 @@ package org.yangmy.tide.service.system.controller;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.common.result.Status;
-import org.yangmy.tide.common.security.TokenUtils;
+import org.yangmy.tide.common.security.LoginTemplate;
 import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
@@ -33,9 +32,9 @@ public class LoginController {
     @Autowired
     private ISysUserService sysUserService;
     @Autowired
-    private StringRedisTemplate stringRedisTemplate;
-    @Autowired
     private SysPermissionMapper sysPermissionMapper;
+    @Autowired
+    private LoginTemplate loginTemplate;
 
     @PostMapping("/login")
     public Result login(@RequestBody @Validated(LoginGroup.class) SysUser sysUser){
@@ -49,9 +48,7 @@ public class LoginController {
             //查询用户拥有的权限
             List<String> codeList=sysPermissionMapper.selectPermissionCodeByUserId(user.getId());
             userInfo.setCodeList(codeList);
-            String token=TokenUtils.generateToken(userInfo);
-            String key = "session" + ":" + user.getId();
-            stringRedisTemplate.opsForValue().set(key, TokenUtils.parseSessionId(token));
+            String token=loginTemplate.login(userInfo);
             Map<String,Object> map=new HashMap<>();
             map.put("userInfo",userInfo);
             map.put("token",token);
@@ -62,10 +59,7 @@ public class LoginController {
 
     @PostMapping("/logout")
     public Result logout(HttpServletRequest request){
-        String token=request.getHeader("accessToken");
-        Long userId=TokenUtils.parseUserInfo(token).getId();
-        String key = "session" + ":" + userId;
-        stringRedisTemplate.delete("session"+":"+key);
+        loginTemplate.logout(request);
         return Result.success();
     }
 
