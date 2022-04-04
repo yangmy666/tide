@@ -46,6 +46,6 @@ public class LoginTemplate {
      */
     public void forcedOffline(String userId){
         String key = "session" + ":" + userId;
-        stringRedisTemplate.delete("session"+":"+key);
+        stringRedisTemplate.delete(key);
     }
 }
