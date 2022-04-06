@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /system
+    context-path: /tide-system
 spring:
   application:
     name: tide-service-system

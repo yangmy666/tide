@@ -22,15 +22,15 @@ import java.util.List;
  * @since 2022-03-31
  */
 @RestController
-@RequestMapping("/sysUser")
-public class SysUserController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
     private ISysUserService sysUserService;
 
     @PreAuth("system:user:search")
-    @GetMapping("/search")
-    public List<SysUser> search(SysUser sysUser){
+    @GetMapping("/list")
+    public List<SysUser> list(SysUser sysUser){
         Wrapper<SysUser> wrapper=new QueryWrapper<SysUser>()
                 .eq(sysUser.getId()!=null,"id",sysUser.getId())
                 .like(sysUser.getUsername()!=null,"username",sysUser.getUsername());

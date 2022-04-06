@@ -33,21 +33,23 @@ public class HeaderInterceptor implements HandlerInterceptor {
             String token=request.getHeader(configuration.getTokenHeader());
             //判断当前要访问的接口是否需要权限
             if(method.isAnnotationPresent(PreAuth.class)){
+                response.setContentType("text/html");
+                response.setCharacterEncoding("UTF-8");
                 //验证token是否有效
                 if(token==null||token.equals("")){
                     //token为空
-                    response.getWriter().write("未授权");
+                    response.getWriter().print("未登录");
                     return false;
                 }
                 try {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
                     String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
-                        response.getWriter().write("未授权");
+                        response.getWriter().print("令牌无效");
                         return false;
                     }
                 }catch (Exception e){
-                    response.getWriter().write("未授权");
+                    response.getWriter().print("令牌无效");
                     return false;
                 }
 
@@ -64,7 +66,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
                     }
                 }
                 if(notPermission){
-                    response.getWriter().write("权限不足");
+                    response.getWriter().print("权限不足");
                     return false;
                 }
             }
