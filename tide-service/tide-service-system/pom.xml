@@ -31,25 +31,7 @@
 
         <dependency>
             <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-p6spy</artifactId>
-            <version>${tide-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-redis</artifactId>
-            <version>${tide-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-result</artifactId>
-            <version>${tide-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-security</artifactId>
+            <artifactId>tide-common-core</artifactId>
             <version>${tide-version}</version>
         </dependency>
 

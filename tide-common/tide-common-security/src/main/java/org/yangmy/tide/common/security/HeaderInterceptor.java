@@ -1,10 +1,12 @@
 package org.yangmy.tide.common.security;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.yangmy.tide.common.result.Result;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,18 +40,24 @@ public class HeaderInterceptor implements HandlerInterceptor {
                 //验证token是否有效
                 if(token==null||token.equals("")){
                     //token为空
-                    response.getWriter().print("未登录");
+                    Result result=new Result(-1,"未登录",null);
+                    String json= JSON.toJSONString(result);
+                    response.getWriter().print(json);
                     return false;
                 }
                 try {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
                     String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
-                        response.getWriter().print("令牌无效");
+                        Result result=new Result(-1,"令牌无效",null);
+                        String json= JSON.toJSONString(result);
+                        response.getWriter().print(json);
                         return false;
                     }
                 }catch (Exception e){
-                    response.getWriter().print("令牌无效");
+                    Result result=new Result(-1,"令牌无效",null);
+                    String json= JSON.toJSONString(result);
+                    response.getWriter().print(json);
                     return false;
                 }
 
@@ -66,7 +74,9 @@ public class HeaderInterceptor implements HandlerInterceptor {
                     }
                 }
                 if(notPermission){
-                    response.getWriter().print("权限不足");
+                    Result result=new Result(-2,"权限不足",null);
+                    String json= JSON.toJSONString(result);
+                    response.getWriter().print(json);
                     return false;
                 }
             }

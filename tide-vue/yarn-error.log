@@ -1,8 +1,8 @@
 Arguments: 
-  C:\WorkUtils\NodeJS\nodejs\node.exe C:\WorkUtils\NodeJS\npm\node_modules\yarn\bin\yarn.js add --save axios vue-axios
+  C:\WorkUtils\NodeJS\nodejs\node.exe C:\WorkUtils\NodeJS\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\WorkUtils\apache-maven\apache-maven-3.8.3\bin;C:\WorkUtils\JDK\graalvm-ce-java11-22.0.0.2\bin;C:\WorkUtils\GoSDK\go1.17\bin;C:\WorkUtils\android\sdk\platform-tools;C:\WorkUtils\android\sdk\tools;C:\WorkUtils\gradle-6.4.1\bin;C:\WorkUtils\NodeJS\nodejs\;C:\WorkUtils\NodeJS\npm\;C:\Program Files\TortoiseSVN\bin;C:\WorkUtils\Nginx\nginx-1.21.4;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files (x86)\NetSarang\Xshell 7\;C:\WorkUtils\Python\pypy3.8-v7.3.7-win64;C:\WorkUtils\Python\python-3.10.0;C:\WorkUtils\mysql\mysql-8.0.22-winx64\bin;C:\Users\minec\AppData\Local\Microsoft\WindowsApps;C:\WorkUtils\Microsoft VS Code\bin;C:\Users\minec\AppData\Roaming\npm
+  C:\Project\Java\tide\tide-vue\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\WorkUtils\apache-maven\apache-maven-3.8.3\bin;C:\WorkUtils\JDK\graalvm-ce-java11-22.0.0.2\bin;C:\WorkUtils\GoSDK\go1.17\bin;C:\WorkUtils\android\sdk\platform-tools;C:\WorkUtils\android\sdk\tools;C:\WorkUtils\gradle-6.4.1\bin;C:\WorkUtils\NodeJS\nodejs\;C:\WorkUtils\NodeJS\npm\;C:\Program Files\TortoiseSVN\bin;C:\WorkUtils\Nginx\nginx-1.21.4;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files (x86)\NetSarang\Xshell 7\;C:\WorkUtils\Python\pypy3.8-v7.3.7-win64;C:\WorkUtils\Python\python-3.10.0;C:\WorkUtils\mysql\mysql-8.0.22-winx64\bin;C:\Users\minec\AppData\Local\Microsoft\WindowsApps;C:\WorkUtils\Microsoft VS Code\bin;C:\Users\minec\AppData\Roaming\npm
 
 Yarn version: 
   1.22.17
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: http://10.77.101.1:4873/vue-axios: no such package available
-      at Request.params.callback [as _callback] (C:\WorkUtils\NodeJS\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\WorkUtils\NodeJS\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (C:\WorkUtils\NodeJS\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (C:\WorkUtils\NodeJS\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1334:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  Error: EPERM: operation not permitted, unlink 'C:\Project\Java\tide\tide-vue\node_modules\esbuild-windows-64\esbuild.exe'
 
 npm manifest: 
   {
@@ -43,7 +33,9 @@ npm manifest:
       "vue-router": "^4.0.12"
     },
     "devDependencies": {
+      "@types/node": "^17.0.23",
       "@vitejs/plugin-vue": "^2.0.0",
+      "@vue/cli-service": "^5.0.4",
       "typescript": "^4.4.4",
       "vite": "^2.7.2",
       "vue-tsc": "^0.29.8"
@@ -1038,6 +1030,11 @@ Lockfile:
       vscode-languageserver-textdocument "^1.0.1"
       vscode-pug-languageservice "0.29.8"
       vscode-typescript-languageservice "0.29.8"
+  
+  vue-axios@^3.4.1:
+    version "3.4.1"
+    resolved "https://registry.npmmirror.com/vue-axios/-/vue-axios-3.4.1.tgz#e092ec4060b42e941ea5059df9b8f09058c3eea9"
+    integrity sha512-8YZYUOQrBEJktxoQtrM4rr2LfVcDaWfJqv8MqtLlgLlkuBvCYKFSZSo6AXQ4YcCzdgccDqstmuaEh68lcH9xWA==
   
   vue-demi@*:
     version "0.12.1"

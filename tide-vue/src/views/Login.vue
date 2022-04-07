@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 import LoginApi from '@/api/system/LoginApi'
+import router from "@/utils/router";
 
 //登录表单
 let form=ref({
@@ -9,8 +10,10 @@ let form=ref({
 })
 //登录方法
 function doLogin(){
-    LoginApi.login(form.value).then(res=>{
-        console.log(res)
+    LoginApi.login(form.value).then(token=>{
+        //将token存入localStorage
+        localStorage.setItem('access-token',token)
+        router.push('/system/user')
     })
 }
 </script>
