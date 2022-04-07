@@ -34,18 +34,18 @@ public class LoginTemplate {
      * 退出登录
      * @param request
      */
-    public void logout(HttpServletRequest request){
+    public boolean logout(HttpServletRequest request){
         String token=request.getHeader(configuration.getTokenHeader());
         Long userId=TokenUtils.parseUserInfo(token).getId();
-        forcedOffline(String.valueOf(userId));
+        return forcedOffline(String.valueOf(userId));
     }
 
     /**
      * 强制下线
      * @param userId
      */
-    public void forcedOffline(String userId){
+    public boolean forcedOffline(String userId){
         String key = "session" + ":" + userId;
-        stringRedisTemplate.delete(key);
+        return Boolean.TRUE.equals(stringRedisTemplate.delete(key));
     }
 }

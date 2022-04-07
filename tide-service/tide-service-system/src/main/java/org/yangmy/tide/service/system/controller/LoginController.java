@@ -39,6 +39,7 @@ public class LoginController {
     @PostMapping("/login")
     public Result login(@RequestBody @Validated(LoginGroup.class) SysUser sysUser){
         Wrapper<SysUser> queryWrapper=new QueryWrapper<>(sysUser);
+        //根据用户名和密码查找用户
         List<SysUser> list=sysUserService.list(queryWrapper);
         if(list.size()==1){
             SysUser user=list.get(0);
@@ -52,23 +53,24 @@ public class LoginController {
             Map<String,Object> map=new HashMap<>();
             map.put("userInfo",userInfo);
             map.put("token",token);
-            return Result.success(map);
+            return new Result(Status.LOGIN_SUCCESS,map);
         }
-        return Result.FAILURE(Status.LOGIN_FAILURE);
+        return new Result(Status.LOGIN_FAILURE);
     }
 
     @PostMapping("/logout")
     public Result logout(HttpServletRequest request){
-        loginTemplate.logout(request);
-        return Result.success();
+        if(loginTemplate.logout(request)){
+            return new Result(Status.SUCCESS);
+        }
+        return new Result(Status.FAILURE);
     }
 
     @PostMapping("/register")
     public Result register(@RequestBody @Validated(RegisterGroup.class) SysUser sysUser){
-        boolean res=sysUserService.save(sysUser);
-        if(res){
-            return Result.success();
+        if(sysUserService.save(sysUser)){
+            return new Result(Status.SUCCESS);
         }
-        return Result.FAILURE(Status.ERROR);
+        return new Result(Status.FAILURE);
     }
 }

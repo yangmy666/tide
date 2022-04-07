@@ -25,29 +25,6 @@ public class Result{
         this.data=data;
     }
 
-    /**
-     * 成功就是成功，只有一种结果，有返回数据和没数据
-     * @return
-     */
-    public static Result success(){
-        return new Result(Status.OK);
-    }
 
-    public static Result success(Object data){
-        return new Result(Status.OK,data);
-    }
-
-    /**
-     * 失败有很多种原因，具体哪种原因，有返回数据和没数据
-     * @param status
-     * @return
-     */
-    public static Result FAILURE(Status status){
-        return new Result(status);
-    }
-
-    public static Result FAILURE(Status status,Object data){
-        return new Result(status,data);
-    }
 
 }

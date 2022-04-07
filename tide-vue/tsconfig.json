@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "strict": true,
-    //支持使用import的方式引入commonjs包
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/": ["src/"]
+    "strict": true,//以严格模式编译
+    "esModuleInterop": true,//支持使用import的方式引入commonjs包
+    "baseUrl": ".",//项目的根目录
+    "removeComments": true, // 是否移除注释
+    "paths": {// 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+      "@/*": ["./src/*"]
     }
   }
 }

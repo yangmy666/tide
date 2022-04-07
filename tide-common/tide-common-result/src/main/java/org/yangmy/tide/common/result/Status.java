@@ -5,11 +5,15 @@ package org.yangmy.tide.common.result;
  */
 public enum Status {
 
-    OK(200,"操作成功"),
-
-    VALID(406,"参数校验错误"),
-    LOGIN_FAILURE(407,"登录失败，用户名或密码错误"),
-    ERROR(500,"错误");
+    /**
+     * 0:成功 1:警告 2:错误
+     */
+    SUCCESS(0,"操作成功"),
+    FAILURE(2,"操作失败"),
+    VALID(1,"参数校验错误"),
+    LOGIN_SUCCESS(0,"登录成功"),
+    LOGIN_FAILURE(2,"登录失败，用户名或密码错误"),
+    ERROR(2,"服务器内部错误");
 
 
     private final Integer code;

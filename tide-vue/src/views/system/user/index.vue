@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import {onMounted, ref} from 'vue'
+import UserApi from '@/api/system/UserApi'
 
-//组件入参
-defineProps<{}>()
-//组件data
-const tableData=ref([])
+let tableData=ref([])
 onMounted(()=>{
-
+    UserApi.list().then(res=>{
+        tableData=ref(res.data)
+    })
 })
 </script>
 

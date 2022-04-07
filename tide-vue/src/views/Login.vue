@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import {ref} from 'vue'
-import {login} from '../api/system/login'
+import LoginApi from '@/api/system/LoginApi'
 
-//组件入参
-/*defineProps<{
-
-}>()*/
-//组件data
 //登录表单
 let form=ref({
   username:'',
   password:''
 })
+//登录方法
 function doLogin(){
-    login(form.value).then(res=>{
+    LoginApi.login(form.value).then(res=>{
         console.log(res)
     })
 }
