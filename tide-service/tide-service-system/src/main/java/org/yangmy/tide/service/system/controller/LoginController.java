@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
-import org.yangmy.tide.common.result.Status;
 import org.yangmy.tide.common.security.LoginTemplate;
 import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.SysUser;
@@ -53,24 +52,24 @@ public class LoginController {
             Map<String,Object> map=new HashMap<>();
             map.put("userInfo",userInfo);
             map.put("token",token);
-            return new Result(Status.LOGIN_SUCCESS,map);
+            return Result.success("登录成功",map);
         }
-        return new Result(Status.LOGIN_FAILURE);
+        return Result.failure("登陆失败","用户名或密码错误");
     }
 
     @PostMapping("/logout")
     public Result logout(HttpServletRequest request){
         if(loginTemplate.logout(request)){
-            return new Result(Status.SUCCESS);
+            return Result.success("退出登录成功",null);
         }
-        return new Result(Status.FAILURE);
+        return Result.warning("退出登录失败","可能已退出");
     }
 
     @PostMapping("/register")
     public Result register(@RequestBody @Validated(RegisterGroup.class) SysUser sysUser){
         if(sysUserService.save(sysUser)){
-            return new Result(Status.SUCCESS);
+            return Result.success("注册成功",null);
         }
-        return new Result(Status.FAILURE);
+        return Result.failure("注册异常",null);
     }
 }

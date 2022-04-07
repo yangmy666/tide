@@ -24,13 +24,13 @@ public class ExceptionControllerAdvice {
         bindingResult.getFieldErrors().forEach((item)->{
             map.put(item.getField(),item.getDefaultMessage());
         });
-        return new Result(Status.VALID,map);
+        return Result.warning("参数校验错误",map);
     }
 
     @ExceptionHandler(value= Throwable.class)
     public Result handleException(Throwable e){
         log.error("服务器内部错误{}，异常类型：{}",e.getMessage(),e.getClass());
-        return new Result(Status.ERROR,e.getMessage());
+        return Result.failure("服务器内部错误",e.getMessage());
     }
 
 }

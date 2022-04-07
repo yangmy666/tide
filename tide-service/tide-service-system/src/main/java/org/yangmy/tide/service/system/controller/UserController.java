@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
-import org.yangmy.tide.common.result.Status;
 import org.yangmy.tide.common.security.PreAuth;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.service.ISysUserService;
@@ -34,7 +33,7 @@ public class UserController {
         Wrapper<SysUser> wrapper=new QueryWrapper<SysUser>()
                 .eq(sysUser.getId()!=null,"id",sysUser.getId())
                 .like(sysUser.getUsername()!=null,"username",sysUser.getUsername());
-        return new Result(Status.SUCCESS,sysUserService.list(wrapper));
+        return Result.success("操作成功",sysUserService.list(wrapper));
     }
 
 }
