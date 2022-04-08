@@ -14,37 +14,37 @@ public class Result{
     private String message;
     private Object data;
 
-    public Result(Integer status,String message,Object data){
-        this.status=status;
+    public Result(Status status,String message,Object data){
+        this.status=status.getValue();
         this.message=message;
         this.data=data;
     }
 
-    public static Result read(Object data){
-        return new Result(0,null,data);
+    public static Result ok(Object data){
+        return new Result(Status.ok,null,data);
     }
 
     public static Result success(String message,Object data){
-        return new Result(1,message,data);
+        return new Result(Status.success,message,data);
     }
 
     public static Result warning(String message,Object data){
-        return new Result(2,message,data);
+        return new Result(Status.warning,message,data);
     }
 
     public static Result failure(String message,Object data){
-        return new Result(3,message,data);
+        return new Result(Status.failure,message,data);
     }
 
     public static Result success(String message){
-        return new Result(1,message,null);
+        return new Result(Status.success,message,null);
     }
 
     public static Result warning(String message){
-        return new Result(2,message,null);
+        return new Result(Status.warning,message,null);
     }
 
     public static Result failure(String message){
-        return new Result(3,message,null);
+        return new Result(Status.failure,message,null);
     }
 }

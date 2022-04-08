@@ -27,13 +27,13 @@ public class UserController {
     @Autowired
     private ISysUserService sysUserService;
 
-    @PreAuth("system:user:searc")
+    @PreAuth("system:user:search")
     @GetMapping("/list")
     public Result list(SysUser sysUser){
         Wrapper<SysUser> wrapper=new QueryWrapper<SysUser>()
                 .eq(sysUser.getId()!=null,"id",sysUser.getId())
                 .like(sysUser.getUsername()!=null,"username",sysUser.getUsername());
-        return Result.read(sysUserService.list(wrapper));
+        return Result.ok(sysUserService.list(wrapper));
     }
 
 }

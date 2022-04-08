@@ -2,11 +2,11 @@
 import {onMounted,ref} from 'vue'
 import UserApi from '@/api/system/UserApi'
 
-let tableData=ref([])
+let tableData:any=ref([])
 
 onMounted(()=>{
-    UserApi.list().then(data=>{
-        tableData.value=data
+    UserApi.list().then(res=>{
+        tableData.value=res.data
     })
 })
 

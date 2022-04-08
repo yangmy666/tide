@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
 import java.util.Collections;
@@ -18,13 +20,23 @@ class TideSystemApplicationTests {
     ISysUserService sysUserService;
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    JavaMailSender javaMailSender;
 
     @Test
     void contextLoads(){
-        stringRedisTemplate.delete("session:1");
+        //创建邮件内容
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("tideSender@163.com");
+        message.setTo("2559718264@qq.com");
+        message.setSubject("潮汐-注册验证码");
+        message.setText("哈哈");
+        //发送邮件
+        javaMailSender.send(message);
+        System.out.println("发送成功");
     }
 
-    @Test
+    //@Test
     void gen() throws Exception {
         FastAutoGenerator.create("jdbc:mysql://47.94.147.204:3306/tide-system?serverTimezone=GMT%2B8", "root", "mysqlyyds")
                 .globalConfig(builder -> {

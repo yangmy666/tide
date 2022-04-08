@@ -11,8 +11,8 @@ const routes = [
     component: ()=>import('@/views/system/user/index.vue')
   },
   {
-    path: '/test/table',
-    component: ()=>import('@/components/Table.vue')
+    path: '/register',
+    component: ()=>import('@/views/Register.vue')
   },
 ]
 

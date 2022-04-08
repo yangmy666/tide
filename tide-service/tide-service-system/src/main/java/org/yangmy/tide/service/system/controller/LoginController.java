@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
-import org.yangmy.tide.common.security.LoginTemplate;
+import org.yangmy.tide.common.security.LoginOperations;
 import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
@@ -31,7 +31,7 @@ public class LoginController {
     @Autowired
     private SysPermissionMapper sysPermissionMapper;
     @Autowired
-    private LoginTemplate loginTemplate;
+    private LoginOperations loginOperations;
 
     @PostMapping("/login")
     public Result login(@RequestBody @Validated(LoginGroup.class) SysUser sysUser){
@@ -48,15 +48,15 @@ public class LoginController {
             List<String> codeList=sysPermissionMapper.selectPermissionCodeByUserId(user.getId());
             userInfo.setCodeList(codeList);
             //登录，生成token
-            String token=loginTemplate.login(userInfo);
+            String token=loginOperations.login(userInfo);
             return Result.success("登录成功",token);
         }
-        return Result.failure("登陆失败","用户名或密码错误");
+        return Result.failure("登陆失败，用户名或密码错误");
     }
 
     @PostMapping("/logout")
     public Result logout(HttpServletRequest request){
-        if(loginTemplate.logout(request)){
+        if(loginOperations.logout(request)){
             return Result.success("退出登录成功");
         }
         return Result.warning("退出登录失败，可能已退出");

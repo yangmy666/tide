@@ -28,14 +28,14 @@ instance.interceptors.request.use(request=>{
     const token=localStorage.getItem('access-token')
     if(token!=null){
         request.headers={
-            'access-token': token
+            'access-token': encodeURIComponent(token)
         }
     }
     return request
 })
 
 // 响应拦截器
-instance.interceptors.response.use(response => {
+instance.interceptors.response.use(response=> {
     const res=response.data
     if(res.status==-2){
         //权限不足
@@ -79,7 +79,7 @@ instance.interceptors.response.use(response => {
             center:true
         })
     }
-    return res.data
+    return res
 })
 
 export default instance

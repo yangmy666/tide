@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.yangmy.tide.common.result.Result;
+import org.yangmy.tide.common.result.Status;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,7 +41,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
                 //验证token是否有效
                 if(token==null||token.equals("")){
                     //token为空
-                    Result result=new Result(-1,"未登录",null);
+                    Result result=new Result(Status.unauthorized,"未登录",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);
                     return false;
@@ -49,13 +50,13 @@ public class HeaderInterceptor implements HandlerInterceptor {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
                     String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
-                        Result result=new Result(-1,"令牌无效",null);
+                        Result result=new Result(Status.unauthorized,"令牌无效",null);
                         String json= JSON.toJSONString(result);
                         response.getWriter().print(json);
                         return false;
                     }
                 }catch (Exception e){
-                    Result result=new Result(-1,"令牌无效",null);
+                    Result result=new Result(Status.unauthorized,"令牌无效",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);
                     return false;
@@ -74,7 +75,7 @@ public class HeaderInterceptor implements HandlerInterceptor {
                     }
                 }
                 if(notPermission){
-                    Result result=new Result(-2,"权限不足",null);
+                    Result result=new Result(Status.permissionDenied,"权限不足",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);
                     return false;

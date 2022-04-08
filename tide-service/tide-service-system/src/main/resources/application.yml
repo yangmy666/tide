@@ -14,6 +14,28 @@ spring:
     host: 47.94.147.204
     port: 6379
     password: 123456
+  mail:
+    username: tideSender@163.com
+    password: LTOJGHVAWFJGRCLR
+    default-encoding: utf-8
+    host: smtp.163.com
+    port: 465
+    # 配置SSL 加密工厂
+    properties:
+      mail:
+        smtp:
+          ssl:
+            # 这里设为true时 端口号设为 465 设为false时 端口号设为994
+            enable: true
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        #表示开启 DEBUG 模式，这样，邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true
+#    username: 2559718264@qq.com
+#    password: 1234qwerasdfzxc
+#    default-encoding: utf-8
+#    host: smtp.qq.com
+#    port: 587
+#    protocol: smtp
 tide:
   security:
     tokenHeader: access-token

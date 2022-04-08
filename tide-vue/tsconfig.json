@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": false,//以严格模式编译
+    "strict": true,//以严格模式编译
     "esModuleInterop": true,//支持使用import的方式引入commonjs包
     "baseUrl": ".",//项目的根目录
     "removeComments": true, // 是否移除注释

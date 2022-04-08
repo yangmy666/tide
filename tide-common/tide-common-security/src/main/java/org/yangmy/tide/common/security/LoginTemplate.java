@@ -11,18 +11,13 @@ import javax.servlet.http.HttpServletRequest;
  * @since 2022-03-31
  */
 @Component
-public class LoginTemplate {
+public class LoginTemplate implements LoginOperations{
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private TideSecurityConfiguration configuration;
 
-    /**
-     * 在确定登录用户名密码正确之后调用此方法为用户生成有效token
-     * @param userInfo
-     * @return token
-     */
     public String login(UserInfo userInfo){
         String token=TokenUtils.generateToken(userInfo);
         String key = "session" + ":" + userInfo.getId();
@@ -30,20 +25,12 @@ public class LoginTemplate {
         return token;
     }
 
-    /**
-     * 退出登录
-     * @param request
-     */
     public boolean logout(HttpServletRequest request){
         String token=request.getHeader(configuration.getTokenHeader());
         Long userId=TokenUtils.parseUserInfo(token).getId();
         return forcedOffline(String.valueOf(userId));
     }
 
-    /**
-     * 强制下线
-     * @param userId
-     */
     public boolean forcedOffline(String userId){
         String key = "session" + ":" + userId;
         return Boolean.TRUE.equals(stringRedisTemplate.delete(key));
