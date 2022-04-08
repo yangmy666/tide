@@ -2,15 +2,17 @@ import request from "@/utils/request";
 
 export default class RegisterApi{
 
-    public static sendCode(mail){
+    public static sendCode(mail:string){
         return request({
             method:'POST',
             url: '/tide-system/register/sendCode',
-            data:mail
+            params:{
+                mail:mail
+            }
         })
     }
 
-    public static register(form){
+    public static register(form:object){
         return request({
             method:'POST',
             url: '/tide-system/register',

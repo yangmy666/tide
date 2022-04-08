@@ -14,7 +14,7 @@ import org.yangmy.tide.service.system.service.MailOperations;
 @Component
 public class MailTemplate implements MailOperations {
 
-    @Value("spring.mail.username")
+    @Value("${spring.mail.username}")
     private String from;
     @Autowired
     private JavaMailSender javaMailSender;

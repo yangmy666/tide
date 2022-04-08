@@ -2,10 +2,8 @@ package org.yangmy.tide.service.system.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.dto.RegisterDto;
@@ -24,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/register")
+@Validated
 public class RegisterController {
 
     @Autowired
@@ -36,7 +35,7 @@ public class RegisterController {
     private MailOperations mailOperations;
 
     @PostMapping("/sendCode")
-    public Result sendCode(@RequestBody @NotBlank String mail){
+    public Result sendCode(@NotBlank @RequestParam("mail") String mail){
         //生成4位验证码
         String code= StringUtils.generateRandomStr(4);
         String key="register:mail:"+mail;
