@@ -24,6 +24,10 @@ public class Result{
         return new Result(Status.ok,null,data);
     }
 
+    public static Result ok(){
+        return new Result(Status.ok,null,null);
+    }
+
     public static Result success(String message,Object data){
         return new Result(Status.success,message,data);
     }

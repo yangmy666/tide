@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
-import org.yangmy.tide.service.system.entity.valid.RegisterGroup;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
@@ -33,10 +32,12 @@ public class SysUser implements Serializable {
     @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 
-    @NotBlank(message = "用户名不能为空",groups = {LoginGroup.class,RegisterGroup.class})
+    @NotBlank(message = "用户名不能为空",groups = {LoginGroup.class})
     private String username;
 
-    @NotBlank(message = "密码不能为空",groups = {LoginGroup.class,RegisterGroup.class})
+    @NotBlank(message = "密码不能为空",groups = {LoginGroup.class})
     private String password;
+
+    private String mail;
 
 }

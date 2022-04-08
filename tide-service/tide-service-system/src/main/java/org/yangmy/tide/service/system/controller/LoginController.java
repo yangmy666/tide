@@ -12,7 +12,6 @@ import org.yangmy.tide.common.security.LoginOperations;
 import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
-import org.yangmy.tide.service.system.entity.valid.RegisterGroup;
 import org.yangmy.tide.service.system.mapper.SysPermissionMapper;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
@@ -62,11 +61,4 @@ public class LoginController {
         return Result.warning("退出登录失败，可能已退出");
     }
 
-    @PostMapping("/register")
-    public Result register(@RequestBody @Validated(RegisterGroup.class) SysUser sysUser){
-        if(sysUserService.save(sysUser)){
-            return Result.success("注册成功");
-        }
-        return Result.failure("注册异常");
-    }
 }
