@@ -38,25 +38,25 @@ public class HeaderInterceptor implements HandlerInterceptor {
             if(method.isAnnotationPresent(PreAuth.class)){
                 response.setContentType("text/html");
                 response.setCharacterEncoding("UTF-8");
-                //验证token是否有效
                 if(token==null||token.equals("")){
                     //token为空
-                    Result result=new Result(Status.unauthorized,"未登录",null);
+                    Result result=new Result(Status.unAuthorized,"请先登录",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);
                     return false;
                 }
+                //验证token是否有效
                 try {
                     Long userId=TokenUtils.parseUserInfo(token).getId();
-                    String sessionId=strRedisTemplate.opsForValue().get("session" + ":" +userId);
+                    String sessionId=strRedisTemplate.opsForValue().get(LoginTemplate.SESSION_KEY_PREFIX +userId);
                     if(!Objects.equals(sessionId, TokenUtils.parseSessionId(token))){
-                        Result result=new Result(Status.unauthorized,"令牌无效",null);
+                        Result result=new Result(Status.unAuthorized,"请先登录",null);
                         String json= JSON.toJSONString(result);
                         response.getWriter().print(json);
                         return false;
                     }
                 }catch (Exception e){
-                    Result result=new Result(Status.unauthorized,"令牌无效",null);
+                    Result result=new Result(Status.unAuthorized,"请先登录",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);
                     return false;
@@ -67,14 +67,14 @@ public class HeaderInterceptor implements HandlerInterceptor {
                 String code=preAuth.value();
                 //判断是否有权访问
                 List<String> codeList=TokenUtils.parseUserInfo(token).getCodeList();
-                boolean notPermission=true;
+                boolean permissionDenied=true;
                 for (String code1 : codeList) {
                     if (code1.equals(code)) {
-                        notPermission = false;
+                        permissionDenied = false;
                         break;
                     }
                 }
-                if(notPermission){
+                if(permissionDenied){
                     Result result=new Result(Status.permissionDenied,"权限不足",null);
                     String json= JSON.toJSONString(result);
                     response.getWriter().print(json);

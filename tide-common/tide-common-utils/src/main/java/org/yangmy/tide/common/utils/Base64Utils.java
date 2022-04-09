@@ -1,4 +1,4 @@
-package org.yangmy.tide.common.security;
+package org.yangmy.tide.common.utils;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 

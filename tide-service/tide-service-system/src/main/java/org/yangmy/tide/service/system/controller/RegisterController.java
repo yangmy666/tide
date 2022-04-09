@@ -9,7 +9,7 @@ import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.dto.RegisterDto;
 import org.yangmy.tide.service.system.service.ISysUserService;
 import org.yangmy.tide.service.system.service.MailOperations;
-import org.yangmy.tide.service.system.utils.StringUtils;
+import org.yangmy.tide.common.utils.StringUtils;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -21,7 +21,6 @@ import java.util.concurrent.TimeUnit;
  * @since 2022-03-31
  */
 @RestController
-@RequestMapping("/register")
 @Validated
 public class RegisterController {
 
@@ -34,19 +33,21 @@ public class RegisterController {
     @Autowired
     private MailOperations mailOperations;
 
-    @PostMapping("/sendCode")
+    private static final String MAIL_CODE_KEY_PREFIX="register:mail:";
+
+    @PostMapping("/sendMailCode")
     public Result sendCode(@NotBlank @RequestParam("mail") String mail){
         //生成4位验证码
         String code= StringUtils.generateRandomStr(4);
-        String key="register:mail:"+mail;
+        String key=MAIL_CODE_KEY_PREFIX+mail;
         stringRedisTemplate.opsForValue().set(key,code,60, TimeUnit.SECONDS);
         executor.execute(()-> mailOperations.sendMessage(mail,"潮汐-邮箱注册验证码",code));
         return Result.ok(60);
     }
 
-    @PostMapping("/")
+    @PostMapping("/register")
     public Result register(@RequestBody @Valid RegisterDto registerDto){
-        String key="register:mail:"+registerDto.getMail();
+        String key=MAIL_CODE_KEY_PREFIX+registerDto.getMail();
         String code=stringRedisTemplate.opsForValue().get(key);
         if(registerDto.getCode().equals(code)){
             SysUser sysUser=new SysUser();
@@ -54,10 +55,12 @@ public class RegisterController {
             sysUser.setPassword(registerDto.getPassword());
             sysUser.setMail(registerDto.getMail());
             if(sysUserService.save(sysUser)){
+                stringRedisTemplate.delete(key);
                 return Result.success("注册成功");
             }
             return Result.failure("注册失败");
         }
         return Result.failure("验证码错误");
     }
+
 }

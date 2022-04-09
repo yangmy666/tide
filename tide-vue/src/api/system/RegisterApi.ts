@@ -5,7 +5,7 @@ export default class RegisterApi{
     public static sendCode(mail:string){
         return request({
             method:'POST',
-            url: '/tide-system/register/sendCode',
+            url: '/tide-system/sendMailCode',
             params:{
                 mail:mail
             }

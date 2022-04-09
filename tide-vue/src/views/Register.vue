@@ -15,10 +15,12 @@ let password2=ref('')
 
 //表单验证规则
 const validPass2 = (rule: any, value: any, callback: any) => {
-    if(password2.value==''){
-        callback(new Error('请确认密码'))
+    if(form.value.password!=''&&password2.value==''){
+        callback(new Error('请再输入一次密码'))
     }else if (password2.value != form.value.password) {
         callback(new Error('两次输入密码不一致'))
+    }else {
+        callback()
     }
 }
 const rules = reactive({
@@ -68,21 +70,20 @@ let loading=ref(false)
 async function submit(){
     loading.value=true
     await unref(ruleFormRef).validate((valid:any) => {
-        alert(2)
         if (valid) {
-            alert(1)
-            RegisterApi.register(form.value).then(()=>{
-                router.push("/")
+            RegisterApi.register(form.value).then(res=>{
+                if(res.status==1){
+                    router.push("/login")
+                }
+                countDown.value=''
+                loading.value=false
             }).catch(()=>{
                 loading.value=false
             })
         }else{
-            alert(3)
             loading.value=false
         }
-        alert(4)
     });
-    alert(5)
 }
 
 //重置表单

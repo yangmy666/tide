@@ -30,8 +30,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-utils</artifactId>
+            <version>${tide-version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -46,13 +47,6 @@
             <groupId>org.yangmy.tide</groupId>
             <artifactId>tide-common-result</artifactId>
             <version>${tide-version}</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.74</version>
             <optional>true</optional>
         </dependency>
 

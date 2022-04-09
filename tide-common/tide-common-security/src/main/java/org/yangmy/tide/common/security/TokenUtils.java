@@ -2,6 +2,7 @@ package org.yangmy.tide.common.security;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.yangmy.tide.common.utils.Base64Utils;
 
 import java.util.UUID;
 

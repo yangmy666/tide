@@ -5,13 +5,11 @@ package org.yangmy.tide.common.result;
  * @since 2022-03-31
  */
 public enum Status {
-
-    permissionDenied(-2),
-    unauthorized(-1),
     ok(0),
     success(1),
     warning(2),
-    failure(3);
+    failure(3),
+    unAuthorized(-1),permissionDenied(-2);
 
     private Integer value;
 

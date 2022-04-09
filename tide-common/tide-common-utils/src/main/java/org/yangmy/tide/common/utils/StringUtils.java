@@ -1,4 +1,4 @@
-package org.yangmy.tide.service.system.utils;
+package org.yangmy.tide.common.utils;
 
 import java.util.Random;
 

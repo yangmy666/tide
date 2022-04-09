@@ -50,7 +50,7 @@ public class LoginController {
             String token=loginOperations.login(userInfo);
             return Result.success("登录成功",token);
         }
-        return Result.failure("登陆失败，用户名或密码错误");
+        return Result.failure("登陆失败","用户名或密码错误");
     }
 
     @PostMapping("/logout")
@@ -58,7 +58,7 @@ public class LoginController {
         if(loginOperations.logout(request)){
             return Result.success("退出登录成功");
         }
-        return Result.warning("退出登录失败，可能已退出");
+        return Result.warning("退出登录失败","可能已退出");
     }
 
 }

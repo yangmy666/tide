@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common.iml" filepath="$PROJECT_DIR$/tide-common/tide-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-core/tide-common-core.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-core/tide-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-p6spy/tide-common-p6spy.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-p6spy/tide-common-p6spy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-redis/tide-common-redis.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-redis/tide-common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-result/tide-common-result.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-result/tide-common-result.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-security/tide-common-security.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-security/tide-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tide-common-utils/tide-common-utils.iml" filepath="$PROJECT_DIR$/tide-common/tide-common-utils/tide-common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-parent.iml" filepath="$PROJECT_DIR$/tide-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service.iml" filepath="$PROJECT_DIR$/tide-service/tide-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service-admin/tide-service-admin.iml" filepath="$PROJECT_DIR$/tide-service/tide-service-admin/tide-service-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service-system/tide-service-system.iml" filepath="$PROJECT_DIR$/tide-service/tide-service-system/tide-service-system.iml" />
+    </modules>
+  </component>
+</project>

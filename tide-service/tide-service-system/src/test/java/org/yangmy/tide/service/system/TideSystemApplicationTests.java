@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.yangmy.tide.common.security.TokenUtils;
+import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.service.ISysUserService;
 
 import java.util.Collections;
@@ -25,15 +26,8 @@ class TideSystemApplicationTests {
 
     @Test
     void contextLoads(){
-        //创建邮件内容
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("tideSender@163.com");
-        message.setTo("2559718264@qq.com");
-        message.setSubject("潮汐-注册验证码");
-        message.setText("哈哈");
-        //发送邮件
-        javaMailSender.send(message);
-        System.out.println("发送成功");
+        UserInfo userInfo=TokenUtils.parseUserInfo("eyJ1c2VySW5mbyI6eyJjb2RlTGlzdCI6W10sImlkIjoxMSwidXNlcm5hbWUiOiJ5aW5saWNoYW94aSJ9LCJzZXNzaW9uSWQiOiIxMWE1NDQwZi02YTY2LTQyNGQtYjQ2Mi1lOGI1N2ZhN2Q1N2IifQ%3D%3D");
+        System.out.println(userInfo.getId());
     }
 
     //@Test

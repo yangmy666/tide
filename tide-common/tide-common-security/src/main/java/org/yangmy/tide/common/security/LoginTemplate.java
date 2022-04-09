@@ -18,10 +18,12 @@ public class LoginTemplate implements LoginOperations{
     @Autowired
     private TideSecurityConfiguration configuration;
 
+    public static final String SESSION_KEY_PREFIX="session:";
+
     @Override
     public String login(UserInfo userInfo){
         String token=TokenUtils.generateToken(userInfo);
-        String key = "session" + ":" + userInfo.getId();
+        String key =  SESSION_KEY_PREFIX + userInfo.getId();
         stringRedisTemplate.opsForValue().set(key, TokenUtils.parseSessionId(token));
         return token;
     }
@@ -35,7 +37,7 @@ public class LoginTemplate implements LoginOperations{
 
     @Override
     public boolean forcedOffline(String userId){
-        String key = "session" + ":" + userId;
+        String key = SESSION_KEY_PREFIX + userId;
         return Boolean.TRUE.equals(stringRedisTemplate.delete(key));
     }
 }

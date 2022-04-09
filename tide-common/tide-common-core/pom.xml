@@ -35,5 +35,12 @@
             <artifactId>tide-common-security</artifactId>
             <version>${tide-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-utils</artifactId>
+            <version>${tide-version}</version>
+        </dependency>
+
     </dependencies>
 </project>

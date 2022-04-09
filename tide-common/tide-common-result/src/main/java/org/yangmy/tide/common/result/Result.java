@@ -11,12 +11,12 @@ import lombok.Data;
 public class Result{
 
     private Integer status;
-    private String message;
+    private String title;
     private Object data;
 
-    public Result(Status status,String message,Object data){
+    public Result(Status status,String title,Object data){
         this.status=status.getValue();
-        this.message=message;
+        this.title=title;
         this.data=data;
     }
 
@@ -28,27 +28,27 @@ public class Result{
         return new Result(Status.ok,null,null);
     }
 
-    public static Result success(String message,Object data){
-        return new Result(Status.success,message,data);
+    public static Result success(String title,Object data){
+        return new Result(Status.success,title,data);
     }
 
-    public static Result warning(String message,Object data){
-        return new Result(Status.warning,message,data);
+    public static Result warning(String title,Object data){
+        return new Result(Status.warning,title,data);
     }
 
-    public static Result failure(String message,Object data){
-        return new Result(Status.failure,message,data);
+    public static Result failure(String title,Object data){
+        return new Result(Status.failure,title,data);
     }
 
-    public static Result success(String message){
-        return new Result(Status.success,message,null);
+    public static Result success(String title){
+        return new Result(Status.success,title,null);
     }
 
-    public static Result warning(String message){
-        return new Result(Status.warning,message,null);
+    public static Result warning(String title){
+        return new Result(Status.warning,title,null);
     }
 
-    public static Result failure(String message){
-        return new Result(Status.failure,message,null);
+    public static Result failure(String title){
+        return new Result(Status.failure,title,null);
     }
 }
