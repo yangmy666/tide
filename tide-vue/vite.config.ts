@@ -13,6 +13,7 @@ export default defineConfig({
   },
   build: {
     minify: 'terser',
+    outDir: '../tide-service/tide-service-system/src/main/resources/static',
     terserOptions: {
       compress: {
         //生产环境打包移除console.log

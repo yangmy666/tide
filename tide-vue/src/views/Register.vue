@@ -42,11 +42,16 @@ const rules = reactive({
 })
 
 //发送验证码
+const sendLoading=ref(false)
 function send(){
+    sendLoading.value=true
     RegisterApi.sendCode(form.value.mail).then(res=>{
+        sendLoading.value=false
         if(res.status==0){
             djs(res.data)
         }
+    }).catch(()=>{
+        sendLoading.value=false
     })
 }
 //验证码失效倒计时
@@ -108,7 +113,7 @@ function reset() {
             </el-form-item>
             <el-form-item label="邮箱" prop="mail">
                 <el-input style="width: 60%" v-model="form.mail" placeholder="请输入邮箱"/>
-                <el-button style="margin-left: 2%" size="small" type="primary" @click="send">发送验证码</el-button>
+                <el-button style="margin-left: 2%" size="small" type="primary" :loading="sendLoading" @click="send">发送验证码</el-button>
             </el-form-item>
             <el-form-item label="验证码" prop="code">
                 <el-input style="width: 60%" v-model="form.code" placeholder="请输入你收到的验证码"/>{{countDown}}
