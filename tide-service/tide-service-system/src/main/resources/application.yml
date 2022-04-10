@@ -38,7 +38,6 @@ tide:
   security:
     tokenHeader: access-token
 mybatis-plus:
-  type-aliases-package: org.yangmy.tide.service.**.entity
   configuration:
     # 自动驼峰命名规则（camel case）映射
     mapUnderscoreToCamelCase: true

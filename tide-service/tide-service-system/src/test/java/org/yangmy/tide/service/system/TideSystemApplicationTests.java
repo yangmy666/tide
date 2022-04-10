@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.yangmy.tide.common.security.TokenUtils;
-import org.yangmy.tide.common.security.UserInfo;
+import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 import org.yangmy.tide.service.system.service.ISysUserService;
+import org.yangmy.tide.service.system.service.impl.QuestionServiceImpl;
 
 import java.util.Collections;
+import java.util.List;
 
 @SpringBootTest
 class TideSystemApplicationTests {
@@ -23,14 +24,18 @@ class TideSystemApplicationTests {
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     JavaMailSender javaMailSender;
+    @Autowired
+    QuestionServiceImpl questionService;
 
     @Test
     void contextLoads(){
-        UserInfo userInfo=TokenUtils.parseUserInfo("eyJ1c2VySW5mbyI6eyJjb2RlTGlzdCI6W10sImlkIjoxMSwidXNlcm5hbWUiOiJ5aW5saWNoYW94aSJ9LCJzZXNzaW9uSWQiOiIxMWE1NDQwZi02YTY2LTQyNGQtYjQ2Mi1lOGI1N2ZhN2Q1N2IifQ%3D%3D");
-        System.out.println(userInfo.getId());
+        List<QuestionVo> list= questionService.recommend();
+        for (QuestionVo questionVo : list) {
+            System.out.println(questionVo.toString());
+        }
     }
 
-    //@Test
+    @Test
     void gen() throws Exception {
         FastAutoGenerator.create("jdbc:mysql://47.94.147.204:3306/tide-system?serverTimezone=GMT%2B8", "root", "mysqlyyds")
                 .globalConfig(builder -> {
@@ -44,7 +49,7 @@ class TideSystemApplicationTests {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, "D://m/mapper")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("sys_role"); // 设置需要生成的表名
+                    builder.addInclude("question"); // 设置需要生成的表名
                     //.addTablePrefix("demo_"); // 设置过滤表前缀
                 })
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板

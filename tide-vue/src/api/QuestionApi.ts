@@ -5,11 +5,10 @@ export default class QuestionApi{
      * 面试题列表
      * @param query
      */
-    public static list(query?:object){
+    public static list(){
         return request({
             method:'GET',
-            url: '/tide-system/question/list',
-            params:query
+            url: '/tide-system/question/recommend',
         })
     }
 }

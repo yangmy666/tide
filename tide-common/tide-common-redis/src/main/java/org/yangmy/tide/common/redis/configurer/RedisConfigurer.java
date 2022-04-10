@@ -1,4 +1,4 @@
-package org.yangmy.tide.common.redis.config;
+package org.yangmy.tide.common.redis.configurer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
  * @日期： 2022/3/21-9:56
  */
 @Configuration
-public class RedisConfig {
+public class RedisConfigurer {
 
     /**
      * Redis序列化最佳实践

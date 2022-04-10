@@ -5,38 +5,29 @@ import router from "@/utils/router";
 import QuestionApi from "@/api/QuestionApi";
 
 onBeforeMount(()=>{
-    QuestionApi.list().then(res=>{
-        questions.values()=res.data
-    })
+    const questionsCache=sessionStorage.getItem("questionsCache")
+    if(questionsCache!=null){
+        questions.value=JSON.parse(questionsCache)
+    }else{
+        loadQuestions()
+    }
 })
 
-let questions=reactive([/*
-    {
-        id:1,
-        question:'AQS的state为什么要加volatile关键字？',
-        user:{
-            id:1,
-            username:'ymy'
-        }
-    },
-    {
-        id:2,
-        question:'HashMap JDK1.7到1.8有什么变化？',
-        user:{
-            id:1,
-            username:'ymy'
-        }
-    },
-    {
-        id:3,
-        question:'MySQL七八张表联查如何优化',
-        user:{
-            id:1,
-            username:'ymy'
-        }
-    },*/])
+//面试题推荐
+let questions:any=ref([])
 
+//加载面试题推荐
+function loadQuestions(){
+    QuestionApi.list().then(res=>{
+        questions.value=res.data
+    })
+}
+
+//跳转面试题内容
 function questionContext(id:number){
+    //先将当前推荐缓存到sessionStorage再跳转,那样返回回来还能继续原来的浏览位置
+    const questionsCache=JSON.stringify(questions.value)
+    sessionStorage.setItem("questionsCache",questionsCache)
     router.push({path:"/questionContext",query:{questionId:id}})
 }
 </script>
@@ -44,10 +35,11 @@ function questionContext(id:number){
 <template>
     <div style="margin: 0 auto;width: 50%">
         <Question v-for="(item,index) in questions"
+                  :questioner="item.questioner"
                   :question="item.question"
-                  :user="item.user"
+                  :star="Number(item.star)"
                   :key="index"
-                  @click="questionContext(item.id)"/>
+                  @click="questionContext(Number(item.id))"/>
     </div>
 </template>
 

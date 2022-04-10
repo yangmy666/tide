@@ -2,21 +2,24 @@
 import {ref} from 'vue'
 
 defineProps<{
+    //提问人
+    questioner?:string
     //问题
     question?:string
-    //提出者
-    user?:{
-        username:string
-    }
+    //点赞数
+    star?:number
 }>()
 
 </script>
 
 <template>
-    <el-descriptions>
-        <el-descriptions-item width="20%">{{user.username}}</el-descriptions-item>
-        <el-descriptions-item width="80%">{{question}}</el-descriptions-item>
-    </el-descriptions>
+    <el-card shadow="hover" style="margin: 5px">
+        <div class="card-header">
+            <span style="text-align: left">{{questioner}}</span>
+            <span style="float: right">{{star}}</span>
+        </div>
+        {{question}}
+    </el-card>
 </template>
 
 <style scoped>

@@ -22,7 +22,7 @@ let loginVisible=ref(false)
 
 <template>
     <el-menu default-active="0"
-             background-color="#778899"
+             background-color="#00BFFF"
              text-color="#ffffff"
              active-text-color="#ffffff"
              mode="horizontal"
