@@ -3,22 +3,21 @@ import { createRouter, createWebHashHistory } from "vue-router"
 //固定路由
 const routes = [
   {
-    path: '/login',
-    component: ()=>import('@/views/Login.vue')
-  },
-  {
-    path: '/register',
-    component: ()=>import('@/views/Register.vue')
-  },
-  {
     path: '/',
-    component: ()=>import('@/views/HomePage.vue')
+    component: ()=>import('@/pages/HomePage.vue'),
+    children:[
+      {
+        path: '/recommend',
+        component: ()=>import('@/pages/Recommend.vue')
+      },
+      {
+        path: '/questionContext',
+        component: ()=>import('@/pages/QuestionContext.vue')
+      }
+    ]
   },
-  {
-    path: '/system/user',
-    component: ()=>import('@/views/system/user/index.vue')
-  },
-
+  {path: '/register', component: ()=>import('@/pages/Register.vue')},
+  {path: '/system/user', component: ()=>import('@/pages/system/user/index.vue')},
 ]
 
 const router = createRouter({

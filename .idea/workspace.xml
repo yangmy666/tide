@@ -20,55 +20,7 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.315e7fca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.34b6b8e2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.5d70c4f0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.7e536ce8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.be58c338.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Login.5bb62440.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Login.7202202b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Login.84bceb5a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Login.abb4b583.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Login.fd9720a0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.200da4e6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.5c347dc0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.7f3f3762.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.81b816ab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.e91a1e49.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/favicon.db74ab0b.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.068ee977.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.1e321d26.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.364deb38.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.4d63a568.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.548c0ce0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.6910a596.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.79ca68c1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.7ac29838.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.7c5e3baf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.b4497eef.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.c58f4fdb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.c5ffa6eb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.d8a7169d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.ea8dd21d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.eddb8519.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/request.fb45f519.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/vendor.c8305d94.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/Result.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/Status.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/Status.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/views/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/vite.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -462,6 +414,7 @@
       <workItem from="1649487966410" duration="80000" />
       <workItem from="1649488068160" duration="16041000" />
       <workItem from="1649507419957" duration="695000" />
+      <workItem from="1649509249846" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -652,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649501089371</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="1">
+      <created>1649509320079</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1649509320079</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

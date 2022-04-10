@@ -2,6 +2,7 @@
 import {ref} from 'vue'
 import LoginApi from '@/api/system/LoginApi'
 import router from "@/utils/router";
+import * as url from "url";
 
 //登录表单
 let form=ref({
@@ -25,19 +26,15 @@ function doLogin(){
 }
 //注册跳转
 function register(){
-    router.push("/register")
+    const href:any=router.resolve({
+        path: '/register'
+    }).href;
+    window.open(href, '_blank')
 }
 </script>
 
 <template>
-  <div style="width: 240px;text-align: center;position: absolute;
-    height: 150px;
-     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 15% auto;
-">
+  <div style="text-align: center;">
       <el-form :model="form" label-width="55px">
           <el-form-item label="账号">
               <el-input v-model="form.username" placeholder="请输入账号"/>
@@ -46,8 +43,8 @@ function register(){
               <el-input v-model="form.password" placeholder="请输入密码" type="password" show-password/>
           </el-form-item>
       </el-form>
-      <el-button :loading="loading" type="primary" @click="doLogin">登录</el-button>
       <el-button @click="register">注册</el-button>
+      <el-button :loading="loading" type="primary" @click="doLogin">登录</el-button>
   </div>
 </template>
 

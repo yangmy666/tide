@@ -8,6 +8,7 @@ export default defineConfig({
   base: './',
   server: {
     port: 80,
+    strictPort:true,
     //启动后打开浏览器
     open: true
   },

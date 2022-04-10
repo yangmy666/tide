@@ -2,32 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edfbd460-4752-43eb-aaf9-59514acde9e6" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/HomePage.34b6b8e2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/HomePage.be58c338.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/Login.5bb62440.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/Login.abb4b583.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/Register.5c347dc0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/Register.e91a1e49.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/favicon.db74ab0b.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.068ee977.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.1e321d26.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.548c0ce0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.7ac29838.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.b4497eef.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/index.c58f4fdb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/request.fb45f519.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/assets/vendor.c8305d94.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/request/Result.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/request/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/QuestionApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Question.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/QuestionContext.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Recommend.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Status.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/request/Status.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/system/UserApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/system/UserApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/request/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/system/user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/system/user/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +34,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="27YEEYkFE3h6NaHPzSZw1n9vbkJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,7 +56,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/工作/SCM/scm-server" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="ts.external.directory.path" value="C:\Project\Java\tide\tide-vue\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -90,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649488512087</updated>
       <workItem from="1649488513872" duration="13151000" />
+      <workItem from="1649562336305" duration="15974000" />
     </task>
     <servers />
   </component>
@@ -106,5 +103,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
