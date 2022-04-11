@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.yangmy.tide.common.security.HeaderInterceptor,\
+  org.yangmy.tide.common.security.TokenInterceptor,\
   org.yangmy.tide.common.security.WebMvcConfig,\
-  org.yangmy.tide.common.security.LoginTemplate,\
-  org.yangmy.tide.common.security.TideSecurityConfiguration
+  org.yangmy.tide.common.security.SecurityConfiguration,\
+  org.yangmy.tide.common.security.SecurityUtils

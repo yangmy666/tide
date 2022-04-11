@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConfigurationProperties(prefix = "tide.security")
-public class TideSecurityConfiguration {
+public class SecurityConfiguration {
 
     /**
      * 前端传过来的携带token的请求头
@@ -23,4 +23,5 @@ public class TideSecurityConfiguration {
     public void setTokenHeader(String tokenHeader) {
         this.tokenHeader = tokenHeader;
     }
+
 }

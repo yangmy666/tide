@@ -33,13 +33,13 @@ public class RegisterController {
     @Autowired
     private MailOperations mailOperations;
 
-    private static final String MAIL_CODE_KEY_PREFIX="register:mail:";
+    private static final String REDIS_MAIL_CODE_DIR="register:mail:";
 
     @PostMapping("/sendMailCode")
-    public Result sendCode(@NotBlank @RequestParam("mail") String mail){
+    public Result sendMailCode(@NotBlank @RequestParam("mail") String mail){
         //生成4位验证码
         String code= StringUtils.generateRandomStr(4);
-        String key=MAIL_CODE_KEY_PREFIX+mail;
+        String key=REDIS_MAIL_CODE_DIR+mail;
         stringRedisTemplate.opsForValue().set(key,code,60, TimeUnit.SECONDS);
         executor.execute(()-> mailOperations.sendMessage(mail,"潮汐-邮箱注册验证码",code));
         return Result.ok(60);
@@ -47,7 +47,7 @@ public class RegisterController {
 
     @PostMapping("/register")
     public Result register(@RequestBody @Valid RegisterDto registerDto){
-        String key=MAIL_CODE_KEY_PREFIX+registerDto.getMail();
+        String key=REDIS_MAIL_CODE_DIR+registerDto.getMail();
         String code=stringRedisTemplate.opsForValue().get(key);
         if(registerDto.getCode().equals(code)){
             SysUser sysUser=new SysUser();
