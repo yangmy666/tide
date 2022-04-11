@@ -1,4 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.yangmy.tide.common.result.ExceptionControllerAdvice
-
-
+  org.yangmy.tide.common.result.ExceptionAdvice

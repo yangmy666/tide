@@ -18,6 +18,11 @@ function recommend(){
 let searchInput=ref('')
 //登录弹窗
 let loginVisible=ref(false)
+
+//关闭登录弹窗
+function closeLoginDialog(){
+    loginVisible.value=false
+}
 </script>
 
 <template>
@@ -40,7 +45,7 @@ let loginVisible=ref(false)
     <router-view/>
     <el-dialog v-model="loginVisible" center width="30%"
                title="登录">
-        <Login/>
+        <Login :closeLoginDialog="closeLoginDialog"/>
     </el-dialog>
 </template>
 

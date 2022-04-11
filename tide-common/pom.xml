@@ -17,9 +17,9 @@
         <module>tide-common-core</module>
         <module>tide-common-p6spy</module>
         <module>tide-common-redis</module>
-        <module>tide-common-result</module>
         <module>tide-common-security</module>
         <module>tide-common-utils</module>
+        <module>tide-common-result</module>
     </modules>
 
 </project>

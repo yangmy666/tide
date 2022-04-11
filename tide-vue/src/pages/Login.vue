@@ -4,6 +4,10 @@ import LoginApi from '@/api/system/LoginApi'
 import router from "@/utils/router";
 import * as url from "url";
 
+const props=defineProps<{
+    closeLoginDialog?:Function
+}>()
+
 //登录表单
 let form=ref({
   username:'',
@@ -17,7 +21,9 @@ function doLogin(){
         if(res.status==1){
             //将token存入localStorage
             localStorage.setItem('access-token',res.data)
-            router.push('/')
+            if(props.closeLoginDialog!=undefined){
+                props.closeLoginDialog()
+            }
         }
         loading.value=false
     }).catch(()=>{

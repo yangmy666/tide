@@ -12,15 +12,10 @@
     <artifactId>tide-common-core</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-redis</artifactId>
-            <version>${tide-version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.yangmy.tide</groupId>
-            <artifactId>tide-common-result</artifactId>
+            <artifactId>tide-common-redis</artifactId>
             <version>${tide-version}</version>
         </dependency>
 
@@ -41,6 +36,17 @@
             <artifactId>tide-common-utils</artifactId>
             <version>${tide-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-result</artifactId>
+            <version>${tide-version}</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>-->
 
     </dependencies>
 </project>

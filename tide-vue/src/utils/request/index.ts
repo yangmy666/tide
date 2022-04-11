@@ -57,7 +57,6 @@ instance.interceptors.response.use((response):Result=> {
         ElNotification({
             type: 'error',
             title: '系统接口' + message.substring(message.length - 3) + '异常',
-            message: 'message'
         })
     }
     return Promise.reject(error);

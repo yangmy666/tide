@@ -47,7 +47,7 @@ public class RegisterController {
 
     @PostMapping("/register")
     public Result register(@RequestBody @Valid RegisterDto registerDto){
-        String key=REDIS_MAIL_CODE_DIR+registerDto.getMail();
+        String key=REDIS_MAIL_CODE_DIR+ registerDto.getMail();
         String code=stringRedisTemplate.opsForValue().get(key);
         if(registerDto.getCode().equals(code)){
             SysUser sysUser=new SysUser();
