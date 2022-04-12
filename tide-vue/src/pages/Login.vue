@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
-import LoginApi from '@/api/system/LoginApi'
+import LoginApi from '@/api/LoginApi'
 import router from "@/utils/router";
-import * as url from "url";
 
 const props=defineProps<{
     closeLoginDialog?:Function

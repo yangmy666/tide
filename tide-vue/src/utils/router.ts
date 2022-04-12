@@ -10,11 +10,12 @@ const routes = [
         path: '/recommend',
         component: ()=>import('@/pages/Recommend.vue')
       },
-      {
-        path: '/questionContext',
-        component: ()=>import('@/pages/QuestionContext.vue')
-      }
+
     ]
+  },
+  {
+    path: '/questionContext',
+    component: ()=>import('@/pages/QuestionContext.vue')
   },
   {path: '/register', component: ()=>import('@/pages/Register.vue')},
   {path: '/system/user', component: ()=>import('@/pages/system/user/index.vue')},

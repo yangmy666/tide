@@ -26,7 +26,7 @@ function closeLoginDialog(){
 </script>
 
 <template>
-    <el-menu default-active="0"
+    <el-menu style="position:fixed;top:0;width: 100%;height:45px;padding: 0;margin: 0;z-index:1" default-active="0"
              background-color="#00BFFF"
              text-color="#ffffff"
              active-text-color="#ffffff"
@@ -42,7 +42,7 @@ function closeLoginDialog(){
         <el-menu-item index="3">历史记录</el-menu-item>
         <el-menu-item index="4">BUG反馈</el-menu-item>
     </el-menu>
-    <router-view/>
+    <router-view style="position:absolute;top:45px;z-index: 0"/>
     <el-dialog v-model="loginVisible" center width="30%"
                title="登录">
         <Login :closeLoginDialog="closeLoginDialog"/>

@@ -17,6 +17,6 @@ public class QuestionVo {
     private Long id;
     private String question;
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long star;
+    private Long like;
     private String questioner;
 }

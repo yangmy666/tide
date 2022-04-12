@@ -1,45 +1,49 @@
 <script setup lang="ts">
-import {onBeforeMount, reactive, ref} from 'vue'
+import {onBeforeMount, ref} from 'vue'
 import Question from '@/components/Question.vue'
 import router from "@/utils/router";
-import QuestionApi from "@/api/QuestionApi";
+import RecommendApi from "@/api/RecommendApi";
+
+//面试题
+let questionList:any=ref([])
+//加载标志
+let loading=ref(false)
 
 onBeforeMount(()=>{
-    const questionsCache=sessionStorage.getItem("questionsCache")
-    if(questionsCache!=null){
-        questions.value=JSON.parse(questionsCache)
-    }else{
-        loadQuestions()
-    }
+    load()
 })
 
-//面试题推荐
-let questions:any=ref([])
-
 //加载面试题推荐
-function loadQuestions(){
-    QuestionApi.list().then(res=>{
-        questions.value=res.data
+function load(){
+    loading.value=true
+    RecommendApi.load().then(res=>{
+        questionList.value=questionList.value.concat(res.data)
+        loading.value=false
+    }).catch(()=>{
+        loading.value=false
     })
 }
 
 //跳转面试题内容
 function questionContext(id:number){
-    //先将当前推荐缓存到sessionStorage再跳转,那样返回回来还能继续原来的浏览位置
-    const questionsCache=JSON.stringify(questions.value)
-    sessionStorage.setItem("questionsCache",questionsCache)
-    router.push({path:"/questionContext",query:{questionId:id}})
+    const href:any=router.resolve({
+        path: '/questionContext',
+        query:{questionId:id}
+    }).href;
+    window.open(href, '_blank')
 }
 </script>
 
 <template>
-    <div style="margin: 0 auto;width: 50%">
-        <Question v-for="(item,index) in questions"
+    <div v-infinite-scroll="load" infinite-scroll-distance="0.5"
+         infinite-scroll-immediate="false" style="margin: 0 auto;width: 60%;float: left">
+        <Question style="width: 100%;margin: 10px" v-for="(item,index) in questionList"
                   :questioner="item.questioner"
                   :question="item.question"
-                  :star="Number(item.star)"
+                  :like="Number(item.like)"
                   :key="index"
                   @click="questionContext(Number(item.id))"/>
+        <div style="width: 100%;height: 300px" v-loading="loading"></div>
     </div>
 </template>
 

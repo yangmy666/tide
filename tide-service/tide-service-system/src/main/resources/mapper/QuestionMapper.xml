@@ -3,7 +3,7 @@
 <mapper namespace="org.yangmy.tide.service.system.mapper.QuestionMapper">
 
     <select id="recommend" resultType="org.yangmy.tide.service.system.entity.vo.QuestionVo">
-        SELECT q.id,q.question,q.star,su.username questioner FROM `question` q
+        SELECT q.id,q.question,q.like,su.username questioner FROM `question` q
             LEFT JOIN sys_user su on q.questioner_id=su.id and su.del_flag=0
         where q.del_flag=0
     </select>

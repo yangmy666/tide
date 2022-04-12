@@ -2,7 +2,7 @@ import request from "@/utils/request";
 
 export default class RegisterApi{
 
-    public static sendCode(mail:string){
+    public static sendMailCode(mail:string){
         return request({
             method:'POST',
             url: '/tide-system/sendMailCode',
@@ -12,11 +12,11 @@ export default class RegisterApi{
         })
     }
 
-    public static register(form:object){
+    public static register(user:object){
         return request({
             method:'POST',
             url: '/tide-system/register',
-            data:form
+            data:user
         })
     }
 }

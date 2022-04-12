@@ -3,13 +3,13 @@ import request from "@/utils/request";
 export default class LoginApi{
     /**
      * 登录
-     * @param form
+     * @param user
      */
-    public static login(form:object){
+    public static login(user:object){
         return request({
             method:'POST',
             url: '/tide-system/login',
-            data:form
+            data:user
         })
     }
 }

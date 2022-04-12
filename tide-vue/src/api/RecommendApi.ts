@@ -1,14 +1,14 @@
 import request from "@/utils/request";
 
-export default class QuestionApi{
+export default class RecommendApi {
     /**
-     * 面试题列表
+     * 加载推荐
      * @param query
      */
-    public static list(){
+    public static load(){
         return request({
             method:'GET',
-            url: '/tide-system/question/recommend',
+            url: '/tide-system/recommend/load',
         })
     }
 }

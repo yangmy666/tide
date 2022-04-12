@@ -26,7 +26,7 @@ public class Question extends BaseEntity implements Serializable {
     private String question;
 
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long star;
+    private Long like;
 
     @JsonSerialize(using = ToStringSerializer.class)
     private Long questionerId;

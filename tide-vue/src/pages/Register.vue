@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {ref,reactive,unref,onBeforeMount} from 'vue'
-import RegisterApi from "@/api/system/RegisterApi";
+import RegisterApi from "@/api/RegisterApi";
 import router from "@/utils/router";
 
 onBeforeMount(()=>{
-    document.title='注册-Java面试刷题网站'
+    document.title='注册'
 })
 
 //提交到后端的邮箱 账号 密码
@@ -49,7 +49,7 @@ const rules = reactive({
 const sendLoading=ref(false)
 function send(){
     sendLoading.value=true
-    RegisterApi.sendCode(form.value.mail).then(res=>{
+    RegisterApi.sendMailCode(form.value.mail).then(res=>{
         sendLoading.value=false
         if(res.status==0){
             djs(res.data)
