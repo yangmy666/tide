@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/examples/pom.xml" />
         <option value="$PROJECT_DIR$/examples/mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/example/example-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/tide-service/tide-service-log/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

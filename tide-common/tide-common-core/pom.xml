@@ -43,6 +43,12 @@
             <version>${tide.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tode-common-mybatisplus</artifactId>
+            <version>${tide.version}</version>
+        </dependency>
+
         <!--<dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>

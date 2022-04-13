@@ -1,4 +1,4 @@
-package org.yangmy.tide.common.utils;
+package org.yangmy.common.mybatisplus;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @author YangMingYang
@@ -22,11 +22,11 @@ public class BaseEntity {
 
     private Long createBy;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     private Long updateBy;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     @TableLogic
     private Integer delFlag;

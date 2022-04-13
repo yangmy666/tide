@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.yangmy.tide.common.utils.BaseEntity;
+import org.yangmy.common.mybatisplus.BaseEntity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package org.yangmy.tide.common.utils.mybatisplus;
+package org.yangmy.common.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;

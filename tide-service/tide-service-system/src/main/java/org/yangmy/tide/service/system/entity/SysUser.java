@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.yangmy.tide.common.utils.BaseEntity;
+import org.yangmy.common.mybatisplus.BaseEntity;
 import org.yangmy.tide.service.system.entity.valid.LoginGroup;
 
 import javax.validation.constraints.NotBlank;

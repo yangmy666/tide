@@ -15,6 +15,10 @@ const handleSelect = (key: string, keyPath: string[]) => {
 function recommend(){
     router.push("/recommend")
 }
+//测试
+function test(){
+    router.push("/test")
+}
 let searchInput=ref('')
 //登录弹窗
 let loginVisible=ref(false)
@@ -34,6 +38,7 @@ function closeLoginDialog(){
              @select="handleSelect">
         <div style="margin: auto 1%"></div>
         <el-menu-item index="0" @click="recommend">推荐</el-menu-item>
+        <el-menu-item index="5" @click="test">测试</el-menu-item>
         <el-input v-model="searchInput" type="text" style="width:15%;margin: auto 1%  auto 55%"
                   placeholder="搜索面试题"
                   :suffix-icon="Search"/>

@@ -12,7 +12,9 @@
         <module name="tide-common-security" />
         <module name="tide-common-p6spy" />
         <module name="tide-common-utils" />
+        <module name="tide-service-log" />
         <module name="tide-common-core" />
+        <module name="tode-common-mybatisplus" />
         <module name="tide-common-redis" />
       </profile>
     </annotationProcessing>
@@ -32,7 +34,9 @@
       <module name="tide-service" target="11" />
       <module name="tide-service-admin" target="11" />
       <module name="tide-service-demo" target="11" />
+      <module name="tide-service-log" target="11" />
       <module name="tide-service-system" target="11" />
+      <module name="tode-common-mybatisplus" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -51,7 +55,9 @@
       <module name="tide-service" options="-parameters" />
       <module name="tide-service-admin" options="-parameters" />
       <module name="tide-service-demo" options="-parameters" />
+      <module name="tide-service-log" options="-parameters" />
       <module name="tide-service-system" options="-parameters" />
+      <module name="tode-common-mybatisplus" options="-parameters" />
     </option>
   </component>
 </project>

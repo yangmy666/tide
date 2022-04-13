@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.yangmy.tide</groupId>
             <artifactId>tide-common-utils</artifactId>
-            <version>${tide-version}</version>
+            <version>${tide.version}</version>
             <optional>true</optional>
         </dependency>
 

@@ -3,6 +3,10 @@ import { createRouter, createWebHashHistory } from "vue-router"
 //固定路由
 const routes = [
   {
+    path: '/test',
+    component: ()=>import('@/pages/Test.vue'),
+  },
+  {
     path: '/',
     component: ()=>import('@/pages/HomePage.vue'),
     children:[

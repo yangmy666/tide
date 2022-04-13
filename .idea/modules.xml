@@ -12,7 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/tide-parent.iml" filepath="$PROJECT_DIR$/tide-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service.iml" filepath="$PROJECT_DIR$/tide-service/tide-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service-admin/tide-service-admin.iml" filepath="$PROJECT_DIR$/tide-service/tide-service-admin/tide-service-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service-log/tide-service-log.iml" filepath="$PROJECT_DIR$/tide-service/tide-service-log/tide-service-log.iml" />
       <module fileurl="file://$PROJECT_DIR$/tide-service/tide-service-system/tide-service-system.iml" filepath="$PROJECT_DIR$/tide-service/tide-service-system/tide-service-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tide-common/tode-common-mybatisplus/tode-common-mybatisplus.iml" filepath="$PROJECT_DIR$/tide-common/tode-common-mybatisplus/tode-common-mybatisplus.iml" />
     </modules>
   </component>
 </project>

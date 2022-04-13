@@ -1,0 +1,5 @@
+server:
+  port: 7070
+spring:
+  elasticsearch:
+    uris: 47.94.147.204:9200
