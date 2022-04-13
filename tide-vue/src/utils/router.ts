@@ -17,8 +17,7 @@ const routes = [
     path: '/questionContext',
     component: ()=>import('@/pages/QuestionContext.vue')
   },
-  {path: '/register', component: ()=>import('@/pages/Register.vue')},
-  {path: '/system/user', component: ()=>import('@/pages/system/user/index.vue')},
+  {path: '/register', component: ()=>import('@/pages/Register.vue')}
 ]
 
 const router = createRouter({

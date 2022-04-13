@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import {ref,onBeforeMount} from 'vue'
+import notLike from '@/../public/notLike.svg'
+import like from '@/../public/notLike.svg'
 
 onBeforeMount(()=>{
     if(props.isLike){
-        url.value='@/../public/like.svg'
+        url.value=like
     }
 })
 
@@ -16,7 +18,7 @@ const props = defineProps<{
     size?:string
 }>()
 
-let url=ref('@/../public/notLike.svg')
+let url=ref(notLike)
 </script>
 
 <template>

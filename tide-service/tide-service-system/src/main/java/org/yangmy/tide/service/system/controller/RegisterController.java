@@ -12,6 +12,7 @@ import org.yangmy.tide.service.system.service.MailOperations;
 import org.yangmy.tide.common.utils.StringUtils;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -36,7 +37,10 @@ public class RegisterController {
     private static final String REDIS_MAIL_CODE_DIR="register:mail:";
 
     @PostMapping("/sendMailCode")
-    public Result sendMailCode(@NotBlank @RequestParam("mail") String mail){
+    public Result sendMailCode(
+            @NotBlank(message ="邮箱不能为空")
+            @Email(message = "邮箱格式不正确")
+            @RequestParam("mail") String mail){
         //生成4位验证码
         String code= StringUtils.generateRandomStr(4);
         String key=REDIS_MAIL_CODE_DIR+mail;
@@ -46,7 +50,7 @@ public class RegisterController {
     }
 
     @PostMapping("/register")
-    public Result register(@RequestBody @Valid RegisterDto registerDto){
+    public Result register(@Valid @RequestBody RegisterDto registerDto){
         String key=REDIS_MAIL_CODE_DIR+ registerDto.getMail();
         String code=stringRedisTemplate.opsForValue().get(key);
         if(registerDto.getCode().equals(code)){

@@ -30,7 +30,7 @@ public class LoginController {
     private SysPermissionMapper sysPermissionMapper;
 
     @PostMapping("/login")
-    public Result login(@RequestBody @Validated(LoginGroup.class) SysUser sysUser){
+    public Result login(@Validated(LoginGroup.class) @RequestBody SysUser sysUser){
         Wrapper<SysUser> queryWrapper=new QueryWrapper<>(sysUser);
         //根据用户名和密码查找用户
         List<SysUser> list=sysUserService.list(queryWrapper);

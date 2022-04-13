@@ -1,6 +1,5 @@
 package org.yangmy.tide.service.system.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -18,10 +17,6 @@ import java.io.Serializable;
 public class Question extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    @TableId("id")
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     private String question;
 

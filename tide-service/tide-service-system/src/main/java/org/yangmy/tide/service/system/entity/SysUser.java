@@ -1,10 +1,7 @@
 package org.yangmy.tide.service.system.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.yangmy.tide.common.utils.BaseEntity;
@@ -29,11 +26,6 @@ import java.io.Serializable;
 public class SysUser extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    @TableId("id")
-    //用string的方式序列化long类型解决精度问题
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     @NotBlank(message = "用户名不能为空",groups = {LoginGroup.class})
     private String username;

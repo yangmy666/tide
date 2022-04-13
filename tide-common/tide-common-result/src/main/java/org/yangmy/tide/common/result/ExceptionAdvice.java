@@ -6,7 +6,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import javax.validation.ValidationException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,11 +27,11 @@ public class ExceptionAdvice {
         return Result.warning("参数校验错误",map);
     }
 
-    @ExceptionHandler(value= {ValidationException.class})
+    /*@ExceptionHandler(value= {ValidationException.class})
     public Result handleValidException(ValidationException e){
         log.info("数据校验出现异常{}，异常类型：{}",e.getMessage(),e.getClass());
         return Result.warning("参数校验错误",e.getMessage());
-    }
+    }*/
 
     @ExceptionHandler(value= Throwable.class)
     public Result handleException(Throwable e){
