@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.yangmy.tide:tide-common-utils:${tide-version}">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../WorkUtils/apache-maven/Workspace/MavenRepository/org/yangmy/tide/tide-common-utils/${tide-version}/tide-common-utils-${tide-version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../WorkUtils/apache-maven/Workspace/MavenRepository/org/yangmy/tide/tide-common-utils/${tide-version}/tide-common-utils-${tide-version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../WorkUtils/apache-maven/Workspace/MavenRepository/org/yangmy/tide/tide-common-utils/${tide-version}/tide-common-utils-${tide-version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

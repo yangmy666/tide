@@ -51,6 +51,7 @@ mybatis-plus:
       logicNotDeleteValue: 0
       # 逻辑已删除值
       logicDeleteValue: 1
+      key-generators:
 
 
 

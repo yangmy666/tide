@@ -18,6 +18,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-security</artifactId>
+            <version>${tide.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
             <scope>compile</scope>

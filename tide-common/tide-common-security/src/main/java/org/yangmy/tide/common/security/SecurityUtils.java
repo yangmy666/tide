@@ -23,6 +23,13 @@ public class SecurityUtils {
         token.set(t);
     }
 
+    public static UserInfo getUserInfo(){
+        if(checkToken(getToken())){
+            return TokenUtils.parseUserInfo(getToken());
+        }
+        return null;
+    }
+
     public static StringRedisTemplate stringRedisTemplate;
 
     @Autowired

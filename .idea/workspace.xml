@@ -21,31 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.775b68e4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/QuestionContext.6423127a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Recommend.6912888f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Recommend.aeaf5f6e.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.817bc7f4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.2a25e609.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.acfcf6ae.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/sheep.c795cfdd.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/vendor.83ae7723.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/notLike.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/sheep.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yangmy_tide_tide_common_core___tide_version_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yangmy_tide_tide_common_utils___tide_version_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/mybatisplus/TideMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/resources/META-INF/spring.factories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/SecurityUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/dto/RegisterDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/Table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +105,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.18.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.18.1" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tide-common/tide-common-result/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.18937875" />
@@ -134,11 +120,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\Java\tide\tide-common\tide-common-utils\src\main\resources" />
       <recent name="C:\Project\Java\tide\tide-common\tide-common-result\src\main\resources" />
       <recent name="C:\Project\Java\tide\tide-common\tide-common-security\src\main\resources" />
       <recent name="C:\Project\Java\tide\tide-service\tide-service-system\src\main\resources\mapper" />
       <recent name="C:\Project\Java\tide\tide-service\tide-service-system\src\main\java\org\yangmy\tide\service\system" />
-      <recent name="C:\Project\Java\tide\tide-service\tide-service-system\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Project\Java\tide\tide-vue\src\api\system" />
@@ -467,7 +453,8 @@
       <workItem from="1649661684880" duration="2421000" />
       <workItem from="1649675497201" duration="821000" />
       <workItem from="1649741301710" duration="5250000" />
-      <workItem from="1649813664792" duration="1469000" />
+      <workItem from="1649813664792" duration="1530000" />
+      <workItem from="1649815613506" duration="1601000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -707,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649756437937</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="1">
+      <created>1649815186758</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1649815186758</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

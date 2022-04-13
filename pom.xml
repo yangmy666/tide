@@ -28,7 +28,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <tide-version>0.0.1-SNAPSHOT</tide-version>
+        <tide.version>0.0.1-SNAPSHOT</tide.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
     </properties>
