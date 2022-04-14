@@ -11,7 +11,7 @@
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 13/04/2022 17:25:52
+ Date: 14/04/2022 15:08:14
 */
 
 SET NAMES utf8mb4;
@@ -25,7 +25,7 @@ CREATE TABLE `answer`  (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `context` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '回复内容',
   `question_id` bigint NOT NULL COMMENT '问题id',
-  `receive_id` bigint NULL DEFAULT NULL COMMENT '被回复的回复id,为空则回答问题的',
+  `receive_id` bigint NOT NULL DEFAULT 0 COMMENT '被回复的回复id,为0则回答问题的',
   `create_by` bigint NOT NULL,
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_by` bigint NOT NULL,
@@ -154,7 +154,7 @@ CREATE TABLE `sys_permission`  (
 -- ----------------------------
 -- Records of sys_permission
 -- ----------------------------
-INSERT INTO `sys_permission` VALUES (1, 'system:user:search', '1', NULL, NULL, 0, '2022-04-13 09:18:55', 0, '2022-04-13 09:18:55', 0);
+INSERT INTO `sys_permission` VALUES (1, 'system:user:list', '1', NULL, NULL, 1, '2022-04-14 06:12:18', 1, '2022-04-14 06:12:18', 0);
 
 -- ----------------------------
 -- Table structure for sys_role
@@ -195,7 +195,7 @@ CREATE TABLE `sys_role_permission`  (
 -- ----------------------------
 -- Records of sys_role_permission
 -- ----------------------------
-INSERT INTO `sys_role_permission` VALUES (1, 1, 1, 0, '2022-04-13 09:21:35', 0, '2022-04-13 09:21:35', 0);
+INSERT INTO `sys_role_permission` VALUES (2, 1, 1, 1, '2022-04-14 06:11:39', 1, '2022-04-14 06:11:39', 0);
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -239,6 +239,6 @@ CREATE TABLE `sys_user_role`  (
 -- ----------------------------
 -- Records of sys_user_role
 -- ----------------------------
-INSERT INTO `sys_user_role` VALUES (1, 1, 1, 0, '2022-04-13 09:23:42', 0, '2022-04-13 09:23:42', 0);
+INSERT INTO `sys_user_role` VALUES (2, 1, 1, 1, '2022-04-14 06:11:26', 1, '2022-04-14 06:11:26', 0);
 
 SET FOREIGN_KEY_CHECKS = 1;

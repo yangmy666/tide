@@ -2,9 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.yangmy.tide.service.system.mapper.QuestionMapper">
 
-    <select id="recommend" resultType="org.yangmy.tide.service.system.entity.vo.QuestionVo">
-        SELECT q.id,q.question,q.like,su.username questioner FROM `question` q
-            LEFT JOIN sys_user su on q.questioner_id=su.id and su.del_flag=0
-        where q.del_flag=0
+    <select id="randomQuery" resultType="org.yangmy.tide.service.system.entity.vo.QuestionVo">
+        SELECT q.id,q.question,su.username questioner,
+        (SELECT count(*) from like_question lq where lq.question_id=q.id and lq.del_flag=0 and q.del_flag=0) like_num,
+        (select count(*)>0 from like_question lq where lq.question_id=q.id and lq.user_id=#{userId} and lq.del_flag=0 and q.del_flag=0) is_like
+        FROM `question` q
+        LEFT JOIN sys_user su on q.questioner_id=su.id and su.del_flag=0
+        where q.del_flag=0 ORDER BY rand() LIMIT 5
     </select>
 </mapper>

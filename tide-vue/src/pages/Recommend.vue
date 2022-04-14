@@ -40,7 +40,8 @@ function questionContext(id:number){
         <Question style="width: 100%;margin: 10px" v-for="(item,index) in questionList"
                   :questioner="item.questioner"
                   :question="item.question"
-                  :like="Number(item.like)"
+                  :likeNum="Number(item.likeNum)"
+                  :is-like="item.isLike"
                   :key="index"
                   @click="questionContext(Number(item.id))"/>
         <div style="width: 100%;height: 300px" v-loading="loading"></div>

@@ -20,7 +20,22 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1" />
+    <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/tide-system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/tide-system.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/Question.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +155,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.maven install">
+  <component name="RunManager" selected="Spring Boot.TideSystemApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <useClassPathOnly />
       <option name="arquillianRunConfiguration">
@@ -284,9 +299,11 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="TideServiceLogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="TideLogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tide-service-log" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.yangmy.tide.service.log.TideLogApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -398,7 +415,7 @@
       <item itemvalue="npm.tide-vue build" />
       <item itemvalue="npm.tide-vue dev" />
       <item itemvalue="Spring Boot.TideSystemApplication" />
-      <item itemvalue="Spring Boot.TideServiceLogApplication" />
+      <item itemvalue="Spring Boot.TideLogApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -510,7 +527,7 @@
       <workItem from="1649828534873" duration="7780000" />
       <workItem from="1649840137581" duration="656000" />
       <workItem from="1649899121438" duration="7811000" />
-      <workItem from="1649908187480" duration="5944000" />
+      <workItem from="1649908187480" duration="12037000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -771,7 +788,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649919210999</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="1">
+      <created>1649919273082</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1649919273082</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

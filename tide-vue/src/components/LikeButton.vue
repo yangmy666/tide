@@ -16,6 +16,8 @@ const props = defineProps<{
     isLike?:boolean
     //大小
     size?:string
+    //是否只读
+    readonly?:boolean
 }>()
 
 let url=ref(notLike)
@@ -23,11 +25,8 @@ let url=ref(notLike)
 
 <template>
     <el-button-group :size="size">
-        <el-button>
-            <el-image :src="url" />
-        </el-button>
-        <el-button disabled>
-            <span>{{num}}</span>
+        <el-button :disabled="readonly">
+            <el-image :src="url" /><span>{{num}}</span>
         </el-button>
     </el-button-group>
 </template>

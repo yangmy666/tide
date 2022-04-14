@@ -7,7 +7,9 @@ const props=defineProps<{
     //问题
     question?:string
     //点赞数
-    like?:number
+    likeNum?:number
+    //当前用户是否点赞
+    isLike?:boolean
 }>()
 
 </script>
@@ -21,7 +23,7 @@ const props=defineProps<{
                         <span style="text-align: left" v-text="questioner"/>
                     </el-button>
                 </el-button-group>
-                <like-button style="float: right" :num="like" size="small"/>
+                <like-button style="float: right" :num="likeNum" :is-like="isLike" size="small" :readonly="true"/>
             </div>
         </template>
         <span style="word-wrap:break-word;

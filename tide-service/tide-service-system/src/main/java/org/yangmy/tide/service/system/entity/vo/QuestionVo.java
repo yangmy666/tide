@@ -13,10 +13,16 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class QuestionVo {
 
+    //面试题id
     @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
+    //面试题
     private String question;
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long like;
+    //提问者
     private String questioner;
+    //面试题获赞数量
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long likeNum;
+    //当前用户是否赞了
+    private Boolean isLike;
 }

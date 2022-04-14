@@ -2,39 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edfbd460-4752-43eb-aaf9-59514acde9e6" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../tide-common/tode-common-mybatisplus/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/src/main/java/org/yangmy/tide/service/log/TideLogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/src/main/java/org/yangmy/tide/service/log/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-log/src/test/java/org/yangmy/tide/service/log/TideLogApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_yangmy_tide_tide_common_core___tide_version_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_yangmy_tide_tide_common_utils___tide_version_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tide-common-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-result/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tide-common-result/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tide-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tode-common-mybatisplus/src/main/java/org/yangmy/common/mybatisplus/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/mybatisplus/TideMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tode-common-mybatisplus/src/main/java/org/yangmy/common/mybatisplus/TideMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-common/tide-common-utils/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-common/tode-common-mybatisplus/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/configurer/SystemConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sql/tide-system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql/tide-system.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LikeButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QuestionContext.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QuestionContext.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Recommend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Recommend.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/request/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +96,7 @@
       <workItem from="1649661696630" duration="3121000" />
       <workItem from="1649741343741" duration="14558000" />
       <workItem from="1649820854344" duration="3789000" />
+      <workItem from="1649919456432" duration="3516000" />
     </task>
     <servers />
   </component>

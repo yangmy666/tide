@@ -18,6 +18,10 @@ import java.util.List;
 @Mapper
 public interface QuestionMapper extends BaseMapper<Question> {
 
-    List<QuestionVo> recommend();
+    /**
+     * 随机查询5条面试题数据
+     * @param userId 当前用户id，判断当前用户是否赞了
+     */
+    List<QuestionVo> randomQuery(Long userId);
 
 }
