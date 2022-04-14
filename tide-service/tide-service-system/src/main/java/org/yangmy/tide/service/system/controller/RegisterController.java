@@ -3,13 +3,16 @@ package org.yangmy.tide.service.system.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
+import org.yangmy.tide.common.utils.StringUtils;
 import org.yangmy.tide.service.system.entity.SysUser;
 import org.yangmy.tide.service.system.entity.dto.RegisterDto;
 import org.yangmy.tide.service.system.service.ISysUserService;
-import org.yangmy.tide.service.system.service.MailOperations;
-import org.yangmy.tide.common.utils.StringUtils;
+import org.yangmy.tide.service.system.utils.MailTemplate;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
@@ -32,7 +35,7 @@ public class RegisterController {
     @Autowired
     private ThreadPoolExecutor executor;
     @Autowired
-    private MailOperations mailOperations;
+    private MailTemplate mailTemplate;
 
     private static final String REDIS_MAIL_CODE_DIR="register:mail:";
 
@@ -45,7 +48,7 @@ public class RegisterController {
         String code= StringUtils.generateRandomStr(4);
         String key=REDIS_MAIL_CODE_DIR+mail;
         stringRedisTemplate.opsForValue().set(key,code,60, TimeUnit.SECONDS);
-        executor.execute(()-> mailOperations.sendMessage(mail,"潮汐-邮箱注册验证码",code));
+        executor.execute(()-> mailTemplate.sendMessage(mail,"潮汐-邮箱注册验证码",code));
         return Result.ok(60);
     }
 

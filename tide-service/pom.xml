@@ -15,6 +15,7 @@
 
     <modules>
         <module>tide-service-system</module>
+        <module>tide-service-log</module>
     </modules>
 
 </project>

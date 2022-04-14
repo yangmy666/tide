@@ -1,11 +1,10 @@
 package org.yangmy.tide.service.system.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.yangmy.common.mybatisplus.BaseEntity;
 
 import java.io.Serializable;
 
@@ -17,23 +16,20 @@ import java.io.Serializable;
  * @author YangMingYang
  * @since 2022-03-31
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @TableName("sys_permission")
-//不序列化null值
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class SysPermission implements Serializable {
+public class SysPermission extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    @TableId("id")
-    //用string的方式序列化long类型解决精度问题
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     private String code;
 
     private Integer type;
 
-    private String route_path;
+    private String routePath;
+
+    private String componentPath;
 
 }

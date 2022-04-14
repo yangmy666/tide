@@ -53,10 +53,10 @@ public class TokenInterceptor implements HandlerInterceptor {
                 }
 
                 //获取接口注解上所允许的权限
-                PreAuthorize preAuthorize =method.getAnnotation(PreAuthorize.class);
+                PreAuthorize preAuthorize = method.getAnnotation(PreAuthorize.class);
                 String code= preAuthorize.value();
-                //判断是否有权访问
-                List<String> codeList=TokenUtils.parseUserInfo(token).getCodeList();
+                //判断用户是否有接口访问权限
+                List<String> codeList=TokenUtils.parseUserInfo(token).getApiCodeList();
                 boolean permissionDenied=true;
                 for (String code1 : codeList) {
                     if (code1.equals(code)) {

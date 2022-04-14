@@ -24,6 +24,8 @@ public class UserInfo implements Serializable {
     private Long id;
     //用户名
     private String username;
-    //用户拥有的所有权限编码
-    private List<String> codeList;
+    //用户拥有的前端权限编码
+    private List<String> pageCodeList;
+    //用户拥有的后端权限编码
+    private List<String> apiCodeList;
 }

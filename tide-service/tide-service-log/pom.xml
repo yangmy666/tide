@@ -28,6 +28,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.yangmy.tide</groupId>
+            <artifactId>tide-common-utils</artifactId>
+            <version>${tide.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

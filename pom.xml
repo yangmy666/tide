@@ -31,6 +31,7 @@
         <tide.version>0.0.1-SNAPSHOT</tide.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <elasticsearch.version>7.8.0</elasticsearch.version>
     </properties>
 
     <dependencyManagement>

@@ -21,88 +21,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_carrotsearch_hppc_0_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_smile_2_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_spullara_mustache_java_compiler_0_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tdunning_t_digest_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_backward_codecs_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_grouping_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial3d_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_extras_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_suggest_8_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_high_level_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_cli_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_core_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_geo_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_plugin_classloader_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_secure_sm_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_x_content_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_jna_5_7_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_aggs_matrix_stats_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_lang_mustache_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_mapper_extras_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_parent_join_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_rank_eval_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_transport_netty4_client_7_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_elasticsearch_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_elasticsearch_4_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-common/tode-common-mybatisplus/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/main/java/org/yangmy/tide/service/log/TideLogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/main/java/org/yangmy/tide/service/log/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/test/java/org/yangmy/tide/service/log/TideLogApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-vue/src/pages/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yangmy_tide_tide_common_core___tide_version_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yangmy_tide_tide_common_utils___tide_version_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_8_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_8_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_8_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/main/java/org/yangmy/tide/service/log/document/SystemLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/ILoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/ISysPermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/SysPermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_backward_codecs_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_backward_codecs_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_8_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_grouping_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_grouping_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_8_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_8_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial3d_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial3d_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_extras_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_extras_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_suggest_8_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_suggest_8_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_high_level_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_high_level_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_cli_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_cli_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_core_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_core_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_geo_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_geo_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_plugin_classloader_7_15_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_secure_sm_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_secure_sm_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_x_content_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_x_content_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_jna_5_7_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_aggs_matrix_stats_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_aggs_matrix_stats_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_lang_mustache_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_lang_mustache_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_mapper_extras_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_mapper_extras_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_parent_join_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_parent_join_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_rank_eval_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_rank_eval_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_transport_netty4_client_7_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_transport_netty4_client_7_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_jna_4_5_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-result/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-result/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-result/src/main/java/org/yangmy/tide/common/result/ExceptionAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tode-common-mybatisplus/src/main/java/org/yangmy/common/mybatisplus/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/java/org/yangmy/tide/common/utils/mybatisplus/TideMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tode-common-mybatisplus/src/main/java/org/yangmy/common/mybatisplus/TideMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-utils/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tode-common-mybatisplus/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/configurer/SystemConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/HomePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-log/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-log/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-log/src/test/java/org/yangmy/tide/service/log/TideLogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-log/src/test/java/org/yangmy/tide/service/log/TideLogApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysDictData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysDictData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysDictType.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysDictType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/SysRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/SysPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/SysPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/MailOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/MailTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/utils/MailTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/SysPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/SysPermissionMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +161,7 @@
     <property name="project.structure.proportion" value="0.18937875" />
     <property name="project.structure.side.proportion" value="0.2696737" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Project\Java\tide\tide-vue\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -209,11 +188,11 @@
       <recent name="org.yangmy.tide.service.system" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.yangmy.tide.service.system.service.impl" />
+      <recent name="org.yangmy.tide.service.system.service" />
       <recent name="org.yangmy.tide.service.log.configurer" />
       <recent name="entity" />
       <recent name="org.yangmy.tide.service.system.entity" />
-      <recent name="org.yangmy.tide.service.demo.config" />
-      <recent name="org.yangmy.tode.common.redis.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,7 +202,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Elasticsearch">
+  <component name="RunManager" selected="Maven.maven install">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <useClassPathOnly />
       <option name="arquillianRunConfiguration">
@@ -268,6 +247,22 @@
       <toRun name="tide-vue build" type="js.build_tools.npm" />
       <toRun name="maven install" type="MavenRunConfiguration" />
       <method v="2" />
+    </configuration>
+    <configuration name="TideLogApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="tide-service-log" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yangmy.tide.service.log.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yangmy.tide.service.log" />
+      <option name="MAIN_CLASS_NAME" value="org.yangmy.tide.service.log.TideLogApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TideSystemApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="tide-service-system" />
@@ -370,13 +365,13 @@
     <configuration name="Elasticsearch" type="docker-deploy" factoryName="docker-image" server-name="Docker">
       <deployment type="docker-image">
         <settings>
-          <option name="imageTag" value="elasticsearch:latest" />
+          <option name="imageTag" value="elasticsearch:7.8.0" />
           <option name="containerName" value="elasticsearch" />
           <option name="envVars">
             <list>
               <DockerEnvVarImpl>
                 <option name="name" value="ES_JAVA_OPTS" />
-                <option name="value" value="-Xms512m -Xmx512m" />
+                <option name="value" value="-Xmx128m -Xms128m" />
               </DockerEnvVarImpl>
             </list>
           </option>
@@ -390,6 +385,14 @@
                 <option name="containerPort" value="9300" />
                 <option name="hostPort" value="9300" />
               </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/usr/share/elasticsearch/config/elasticsearch.yml" />
+                <option name="hostPath" value="/root/elasticsearch/es.yml" />
+              </DockerVolumeBindingImpl>
             </list>
           </option>
         </settings>
@@ -449,6 +452,7 @@
     <list>
       <item itemvalue="Docker.Elasticsearch" />
       <item itemvalue="Docker.tide-service-system" />
+      <item itemvalue="JUnit.TideLogApplicationTests.contextLoads" />
       <item itemvalue="JUnit.TideSystemApplicationTests.gen" />
       <item itemvalue="JUnit.TideSystemApplicationTests.contextLoads" />
       <item itemvalue="Maven.maven install" />
@@ -567,6 +571,8 @@
       <workItem from="1649815613506" duration="3026000" />
       <workItem from="1649828534873" duration="7780000" />
       <workItem from="1649840137581" duration="656000" />
+      <workItem from="1649899121438" duration="7811000" />
+      <workItem from="1649908187480" duration="5644000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>

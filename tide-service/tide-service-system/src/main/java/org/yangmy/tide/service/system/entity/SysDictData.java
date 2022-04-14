@@ -1,8 +1,10 @@
 package org.yangmy.tide.service.system.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.yangmy.common.mybatisplus.BaseEntity;
 
 import java.io.Serializable;
 
@@ -14,16 +16,15 @@ import java.io.Serializable;
  * @author YangMingYang
  * @since 2022-03-31
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @TableName("sys_dict_data")
-public class SysDictData implements Serializable {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class SysDictData extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId("id")
-    private Long id;
-
-    private Long dictType;
+    private Long dictTypeId;
 
     private String dictLabel;
 

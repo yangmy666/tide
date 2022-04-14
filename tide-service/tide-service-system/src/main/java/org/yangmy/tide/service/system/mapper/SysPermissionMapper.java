@@ -2,6 +2,7 @@ package org.yangmy.tide.service.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.yangmy.tide.service.system.entity.SysPermission;
 
 import java.util.List;
@@ -13,5 +14,5 @@ import java.util.List;
 @Mapper
 public interface SysPermissionMapper extends BaseMapper<SysPermission> {
 
-    List<String> selectPermissionCodeByUserId(Long userId);
+    List<String> selectPermissionCodeByUserId(@Param("userId") long userId,@Param("type") int type);
 }
