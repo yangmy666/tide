@@ -2,7 +2,7 @@
 import LikeButton from '@/components/LikeButton.vue'
 
 const props=defineProps<{
-    //提问人
+    //提问用户
     questioner?:string
     //问题
     question?:string

@@ -14,7 +14,7 @@ import java.util.List;
  * @author YangMingYang
  * @since 2022-04-10
  */
-public interface IQuestionService extends IService<Question> {
+public interface IRecommendService extends IService<Question> {
 
     List<QuestionVo> recommend();
 

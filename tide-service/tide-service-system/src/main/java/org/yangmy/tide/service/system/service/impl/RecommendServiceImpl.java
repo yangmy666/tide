@@ -8,7 +8,7 @@ import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.Question;
 import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 import org.yangmy.tide.service.system.mapper.QuestionMapper;
-import org.yangmy.tide.service.system.service.IQuestionService;
+import org.yangmy.tide.service.system.service.IRecommendService;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * @since 2022-04-10
  */
 @Service
-public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> implements IQuestionService {
+public class RecommendServiceImpl extends ServiceImpl<QuestionMapper, Question> implements IRecommendService {
 
     @Autowired
     private QuestionMapper questionMapper;

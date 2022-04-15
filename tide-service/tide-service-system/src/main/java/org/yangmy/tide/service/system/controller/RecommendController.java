@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.yangmy.tide.common.result.Result;
-import org.yangmy.tide.service.system.service.IQuestionService;
+import org.yangmy.tide.service.system.service.IRecommendService;
 
 /**
  * @author YangMingYang
@@ -16,14 +16,14 @@ import org.yangmy.tide.service.system.service.IQuestionService;
 public class RecommendController {
 
     @Autowired
-    private IQuestionService questionService;
+    private IRecommendService recommendService;
 
     /**
      * 首页推荐
      * @return 面试题目集合
      */
     @GetMapping("/load")
-    public Result recommend(){
-        return Result.ok(questionService.recommend());
+    public Result load(){
+        return Result.ok(recommendService.recommend());
     }
 }

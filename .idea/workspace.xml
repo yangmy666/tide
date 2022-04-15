@@ -21,19 +21,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IQuestionContextService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionContextImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-vue/src/api/QuestionContextApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-vue/src/components/Answer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/tide-system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/tide-system.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RecommendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RecommendController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/mapper/QuestionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IRecommendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RecommendServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/test/java/org/yangmy/tide/service/system/TideSystemApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/test/java/org/yangmy/tide/service/system/TideSystemApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-vue/src/components/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/Question.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +158,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TideSystemApplication">
+  <component name="RunManager" selected="Docker.tide-service-system">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <useClassPathOnly />
       <option name="arquillianRunConfiguration">
@@ -527,7 +530,7 @@
       <workItem from="1649828534873" duration="7780000" />
       <workItem from="1649840137581" duration="656000" />
       <workItem from="1649899121438" duration="7811000" />
-      <workItem from="1649908187480" duration="12037000" />
+      <workItem from="1649908187480" duration="15539000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -795,7 +798,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649919273082</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="1">
+      <created>1649926130391</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1649926130391</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

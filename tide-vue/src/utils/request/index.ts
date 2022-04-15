@@ -5,8 +5,8 @@ import {Status} from '@/utils/request/Status';
 import Result from '@/utils/request/Result';
 
 const instance = axios.create({
-    //baseURL: 'http://47.94.147.204/api',
-    baseURL: 'http://localhost:8080/api',
+    baseURL: 'http://47.94.147.204/api',
+    //baseURL: 'http://localhost:8080/api',
     timeout: 10000
 })
 

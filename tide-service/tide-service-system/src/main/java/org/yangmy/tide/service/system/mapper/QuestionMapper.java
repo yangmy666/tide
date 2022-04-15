@@ -2,6 +2,7 @@ package org.yangmy.tide.service.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.yangmy.tide.service.system.entity.Question;
 import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 
@@ -23,5 +24,7 @@ public interface QuestionMapper extends BaseMapper<Question> {
      * @param userId 当前用户id，判断当前用户是否赞了
      */
     List<QuestionVo> randomQuery(Long userId);
+
+    QuestionVo selectDetails(@Param("userId") Long userId,@Param("questionId") Long questionId);
 
 }

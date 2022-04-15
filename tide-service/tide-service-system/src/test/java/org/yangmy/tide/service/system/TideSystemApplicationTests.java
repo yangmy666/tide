@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 import org.yangmy.tide.service.system.service.ISysUserService;
-import org.yangmy.tide.service.system.service.impl.QuestionServiceImpl;
+import org.yangmy.tide.service.system.service.impl.RecommendServiceImpl;
 
 import java.util.Collections;
 import java.util.List;
@@ -25,7 +25,7 @@ class TideSystemApplicationTests {
     @Autowired
     JavaMailSender javaMailSender;
     @Autowired
-    QuestionServiceImpl questionService;
+    RecommendServiceImpl questionService;
 
     @Test
     void contextLoads(){
