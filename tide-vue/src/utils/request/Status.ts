@@ -1,5 +1,5 @@
 export enum Status {
-    ok=0,//加载数据
+    load=0,//加载数据
     success=1,//操作成功
     warning=2,//操作警告
     failure=3,//操作失败
