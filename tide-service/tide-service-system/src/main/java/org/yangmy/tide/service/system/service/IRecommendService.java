@@ -1,10 +1,8 @@
 package org.yangmy.tide.service.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.service.system.entity.Question;
-import org.yangmy.tide.service.system.entity.vo.QuestionVo;
-
-import java.util.List;
 
 /**
  * <p>
@@ -16,6 +14,6 @@ import java.util.List;
  */
 public interface IRecommendService extends IService<Question> {
 
-    List<QuestionVo> recommend();
+    Result recommend();
 
 }

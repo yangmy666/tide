@@ -1,6 +1,6 @@
 package org.yangmy.tide.service.system.service;
 
-import org.yangmy.tide.service.system.entity.vo.QuestionVo;
+import org.yangmy.tide.common.result.Result;
 
 /**
  * @author YangMingYang
@@ -13,5 +13,5 @@ public interface IQuestionContextService {
      * @param questionId
      * @return
      */
-    QuestionVo selectDetails(Long questionId);
+    Result selectDetails(Long questionId);
 }

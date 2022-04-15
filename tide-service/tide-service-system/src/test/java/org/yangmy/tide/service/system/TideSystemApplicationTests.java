@@ -8,12 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 import org.yangmy.tide.service.system.service.ISysUserService;
 import org.yangmy.tide.service.system.service.impl.RecommendServiceImpl;
 
 import java.util.Collections;
-import java.util.List;
 
 @SpringBootTest
 class TideSystemApplicationTests {
@@ -29,10 +27,7 @@ class TideSystemApplicationTests {
 
     @Test
     void contextLoads(){
-        List<QuestionVo> list= questionService.recommend();
-        for (QuestionVo questionVo : list) {
-            System.out.println(questionVo.toString());
-        }
+
     }
 
     @Test

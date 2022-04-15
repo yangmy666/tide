@@ -3,14 +3,12 @@ package org.yangmy.tide.service.system.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.common.security.SecurityUtils;
 import org.yangmy.tide.common.security.UserInfo;
 import org.yangmy.tide.service.system.entity.Question;
-import org.yangmy.tide.service.system.entity.vo.QuestionVo;
 import org.yangmy.tide.service.system.mapper.QuestionMapper;
 import org.yangmy.tide.service.system.service.IRecommendService;
-
-import java.util.List;
 
 /**
  * <p>
@@ -27,13 +25,13 @@ public class RecommendServiceImpl extends ServiceImpl<QuestionMapper, Question> 
     private QuestionMapper questionMapper;
 
     @Override
-    public List<QuestionVo> recommend() {
+    public Result recommend() {
         UserInfo userInfo = SecurityUtils.getUserInfo();
         Long userId=0L;
         if(userInfo!=null){
             userId=userInfo.getId();
         }
-        return questionMapper.randomQuery(userId);
+        return Result.ok(questionMapper.randomQuery(userId));
     }
 
 

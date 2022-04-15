@@ -21,6 +21,6 @@ public class QuestionContextController {
 
     @GetMapping("/load")
     public Result load(@RequestParam("questionId") Long questionId){
-        return Result.ok(questionContextService.selectDetails(questionId));
+        return questionContextService.selectDetails(questionId);
     }
 }
