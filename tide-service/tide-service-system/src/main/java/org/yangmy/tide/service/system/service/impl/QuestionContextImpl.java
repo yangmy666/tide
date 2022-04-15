@@ -25,6 +25,6 @@ public class QuestionContextImpl implements IQuestionContextService {
         if(userInfo!=null){
             userId=userInfo.getId();
         }
-        return Result.ok(questionMapper.selectDetails(userId,questionId));
+        return Result.load(questionMapper.selectDetails(userId,questionId));
     }
 }

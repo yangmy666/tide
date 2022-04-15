@@ -20,12 +20,8 @@ public class Result{
         this.data=data;
     }
 
-    public static Result ok(Object data){
-        return new Result(Status.ok,null,data);
-    }
-
-    public static Result ok(){
-        return new Result(Status.ok,null,null);
+    public static Result load(Object data){
+        return new Result(Status.load,null,data);
     }
 
     public static Result success(String message,Object data){

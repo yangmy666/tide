@@ -39,7 +39,7 @@ public class RegisterServiceImpl implements IRegisterService {
         String key=REDIS_MAIL_CODE_DIR+mail;
         stringRedisTemplate.opsForValue().set(key,code,60, TimeUnit.SECONDS);
         executor.execute(()-> mailTemplate.sendMessage(mail,"潮汐-邮箱注册验证码",code));
-        return Result.ok(60);
+        return Result.load(60);
     }
 
     @Override
