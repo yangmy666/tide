@@ -18,17 +18,27 @@ function doLogin(){
     loading.value=true
     LoginApi.login(form.value).then(res=>{
         if(res.status==1){
-            //将token存入localStorage
-            localStorage.setItem('access-token',res.data)
-            if(props.closeLoginDialog!=undefined){
-                props.closeLoginDialog()
-            }
+          //将token存入localStorage
+          localStorage.setItem('access-token',res.data)
+          reset()
+          if(props.closeLoginDialog!=undefined){
+              props.closeLoginDialog()
+          }
         }
         loading.value=false
     }).catch(()=>{
         loading.value=false
     })
 }
+
+//重置表单
+function reset(){
+  form.value={
+    username:'',
+    password:''
+  }
+}
+
 //注册跳转
 function register(){
     const href:any=router.resolve({
