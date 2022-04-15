@@ -2,28 +2,28 @@
 import {onBeforeMount, ref} from 'vue'
 import {useRoute} from "vue-router";
 import QuestionContextApi from "@/api/QuestionContextApi"
-import Question from "@/components/Question.vue"
 
 //取出路由传递的面试题id
 const questionId=ref(useRoute().query.questionId)
 onBeforeMount(()=>{
-    QuestionContextApi.load(Number(questionId)).then(res=>{
+    QuestionContextApi.load(Number(questionId.value)).then(res=>{
         questionContext.value=res.data
     })
 })
+//面试题内容
 let questionContext=ref({
     questioner:'',
     question:'',
     likeNum:0,
-    isLike:false
+    isLike:false,
+    createTime:''
 })
+//解答列表
+let answerList=ref([])
 </script>
 
 <template>
-    <Question :questioner="questionContext.questioner"
-              :question="questionContext.question"
-              :like-num="questionContext.likeNum"
-              :is-like="questionContext.isLike"/>
+
 </template>
 
 <style scoped>

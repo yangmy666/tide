@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref,onBeforeMount,watch} from 'vue'
+import {ref,onBeforeMount} from 'vue'
 import notLike from '@/../public/notLike.svg'
 import like from '@/../public/notLike.svg'
 
@@ -9,26 +9,20 @@ onBeforeMount(()=>{
     }
 })
 
-//todo 监听isLike来变换点赞图标
-
 const props = defineProps<{
     //点赞数
     num?:number
     //是否已赞
     isLike?:boolean
-    //大小
-    size?:string
 }>()
 
 let url=ref(notLike)
 </script>
 
 <template>
-    <el-button-group :size="size">
-        <el-button>
-            <el-image :src="url" /><span>{{num}}</span>
-        </el-button>
-    </el-button-group>
+    <el-tag color="#ffffff">
+        <el-image :src="url" />{{num}}
+    </el-tag>
 </template>
 
 <style scoped>

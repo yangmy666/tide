@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onBeforeMount, ref} from 'vue'
-import Question from '@/components/Question.vue'
+import QuestionCard from '@/components/QuestionCard.vue'
 import router from "@/utils/router";
 import RecommendApi from "@/api/RecommendApi";
 
@@ -24,26 +24,19 @@ function load(){
     })
 }
 
-//跳转面试题内容
-function questionContext(id:number){
-    const href:any=router.resolve({
-        path: '/questionContext',
-        query:{questionId:id}
-    }).href;
-    window.open(href, '_blank')
-}
 </script>
 
 <template>
     <div v-infinite-scroll="load" infinite-scroll-distance="0.5"
          infinite-scroll-immediate="false" style="margin: 0 auto;width: 60%;float: left">
-        <Question style="width: 100%;margin: 10px" v-for="(item,index) in questionList"
+        <QuestionCard style="width: 100%;margin: 10px" v-for="(item,index) in questionList"
+                      :question-id="Number(item.id)"
                   :questioner="item.questioner"
                   :question="item.question"
                   :likeNum="Number(item.likeNum)"
                   :is-like="item.isLike"
-                  :key="index"
-                  @click="questionContext(Number(item.id))"/>
+                  :create-time="item.createTime"
+                  :key="index"/>
         <div style="width: 100%;height: 300px" v-loading="loading"></div>
     </div>
 </template>

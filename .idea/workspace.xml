@@ -21,13 +21,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.ecde1612.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/QuestionContext.4bd286b9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Recommend.5e0f9286.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.8a9b856a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.2af5d905.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.5238a522.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/HomePage.79659dbf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/QuestionContext.02459f36.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Recommend.d3156a4d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/Register.25212de2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.0572f668.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/assets/index.66f1d1a4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-vue/src/components/LikeTag.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tide-vue/src/components/QuestionCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/entity/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RecommendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RecommendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/components/LikeButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/components/Question.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/QuestionContext.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/pages/Recommend.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +114,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.18.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.18.1" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../elasticsearch-learn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tide-vue/package.json" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.18937875" />
@@ -359,6 +372,10 @@
                 <option name="hostIp" value="0.0.0.0" />
                 <option name="hostPort" value="80" />
               </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8890" />
+                <option name="hostPort" value="8890" />
+              </DockerPortBindingImpl>
             </list>
           </option>
           <option name="sourceFilePath" value="tide-service/tide-service-system/Dockerfile" />
@@ -522,6 +539,11 @@
       <workItem from="1649899121438" duration="7811000" />
       <workItem from="1649908187480" duration="15539000" />
       <workItem from="1649992610870" duration="2566000" />
+      <workItem from="1649995285790" duration="154000" />
+      <workItem from="1649999487777" duration="31000" />
+      <workItem from="1649999541447" duration="685000" />
+      <workItem from="1650000302470" duration="6915000" />
+      <workItem from="1650014214095" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -824,7 +846,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649994774927</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="1">
+      <created>1649995435339</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1649995435339</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

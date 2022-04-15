@@ -34,5 +34,4 @@ public class RecommendServiceImpl extends ServiceImpl<QuestionMapper, Question> 
         return Result.load(questionMapper.randomQuery(userId));
     }
 
-
 }

@@ -25,4 +25,6 @@ public class QuestionVo {
     private Long likeNum;
     //当前用户是否赞了
     private Boolean isLike;
+    //提问时间
+    private String createTime;
 }
