@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LikeTag from '@/components/LikeTag.vue'
+import LikeButton from '@/components/LikeButton.vue'
 import {ref} from 'vue'
 import router from "@/utils/router";
 
@@ -26,6 +26,12 @@ function questionContext(){
     }).href;
     window.open(href, '_blank')
 }
+
+const il=ref(props.isLike)
+//点赞
+function doLike(){
+    il.value = !il.value;
+}
 </script>
 
 <template>
@@ -38,7 +44,7 @@ function questionContext(){
             </div>
             <el-tag style="float: right;" color="#ffffff" v-text="createTime"/>
         </el-card>
-        <LikeTag style="position: relative;bottom:42px;left: 80%" :num="likeNum" :is-like="isLike"/>
+        <LikeButton @click="doLike" style="position: relative;bottom:42px;left: 80%" :num="likeNum" :is-like="il" size="small"/>
     </div>
 </template>
 

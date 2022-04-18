@@ -6,10 +6,22 @@ import like from '@/../public/notLike.svg'
 onBeforeMount(()=>{
     if(props.isLike){
         url.value=like
+    }else{
+        url.value=notLike
     }
 })
 
 //todo 监听isLike来变换点赞图标
+watch(()=>props.isLike,newVal=>{
+    if(newVal){
+        console.log(1)
+        url.value=like
+    }else{
+        console.log(2)
+        url.value=notLike
+    }
+    console.log(url.value)
+})
 
 const props = defineProps<{
     //点赞数
@@ -20,7 +32,7 @@ const props = defineProps<{
     size?:string
 }>()
 
-let url=ref(notLike)
+let url=ref('')
 </script>
 
 <template>
