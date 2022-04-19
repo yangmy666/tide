@@ -2,8 +2,8 @@ package org.yangmy.tide.common.security;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,8 +19,8 @@ import java.util.List;
  * @author YangMingYang
  * @since 2022-03-31
  */
-@Configuration
-public class TokenInterceptor implements HandlerInterceptor {
+@Component
+public class HeaderInterceptor implements HandlerInterceptor {
 
     @Autowired
     private SecurityConfiguration configuration;

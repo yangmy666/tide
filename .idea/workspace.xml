@@ -22,20 +22,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ca0163ab-0e33-49ab-a649-70c1379cc9c0" name="更改" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/QuestionContextController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RecommendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RecommendController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/ILoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IQuestionContextService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IQuestionContextService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IRecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IRecommendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/IRegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionContextImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/QuestionContextImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RecommendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RecommendServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-service/tide-service-system/src/main/java/org/yangmy/tide/service/system/service/impl/RegisterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tide-vue/src/utils/request/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/HeaderInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/java/org/yangmy/tide/common/security/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/tide-common/tide-common-security/src/main/resources/META-INF/spring.factories" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,7 +533,7 @@
       <workItem from="1650251135156" duration="2220000" />
       <workItem from="1650262828956" duration="2530000" />
       <workItem from="1650271775617" duration="2454000" />
-      <workItem from="1650329261653" duration="4232000" />
+      <workItem from="1650329261653" duration="5717000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1647847408868</created>
@@ -867,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650250075215</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="1">
+      <created>1650334417247</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1650334417247</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
