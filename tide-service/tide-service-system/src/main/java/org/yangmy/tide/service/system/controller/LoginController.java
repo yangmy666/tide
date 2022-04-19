@@ -22,12 +22,19 @@ public class LoginController {
 
     @PostMapping("/login")
     public Result login(@Validated(LoginGroup.class) @RequestBody SysUser sysUser){
-        return loginService.login(sysUser);
+        String token=loginService.login(sysUser);
+        if(token==null){
+            return Result.failure("登陆失败","用户名或密码错误");
+        }
+        return Result.success("登录成功",token);
     }
 
     @PostMapping("/logout")
     public Result logout(){
-        return loginService.logout();
+        if(loginService.logout()){
+            return Result.success("退出登录成功");
+        }
+        return Result.warning("退出登录失败","可能已退出");
     }
 
 }

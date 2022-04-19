@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="edfbd460-4752-43eb-aaf9-59514acde9e6" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tide-service/tide-service-system/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LikeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LikeButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/request/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +89,7 @@
       <workItem from="1649919456432" duration="6506000" />
       <workItem from="1650003840325" duration="9064000" />
       <workItem from="1650014795378" duration="653000" />
+      <workItem from="1650263461760" duration="1267000" />
     </task>
     <servers />
   </component>

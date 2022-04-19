@@ -1,6 +1,5 @@
 package org.yangmy.tide.service.system.service;
 
-import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.service.system.entity.SysUser;
 
 /**
@@ -9,7 +8,7 @@ import org.yangmy.tide.service.system.entity.SysUser;
  */
 public interface ILoginService {
 
-    Result login(SysUser sysUser);
+    String login(SysUser sysUser);
 
-    Result logout();
+    boolean logout();
 }

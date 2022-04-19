@@ -24,6 +24,6 @@ public class RecommendController {
      */
     @GetMapping("/load")
     public Result load(){
-        return recommendService.recommend();
+        return Result.load(recommendService.load());
     }
 }

@@ -1,6 +1,6 @@
 package org.yangmy.tide.service.system.config;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author YangMingYang
  * @since 2022-03-31
  */
-@Configuration
+@Component
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override

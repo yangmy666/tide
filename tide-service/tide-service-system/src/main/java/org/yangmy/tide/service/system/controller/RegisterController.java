@@ -30,12 +30,19 @@ public class RegisterController {
             @NotBlank(message ="邮箱不能为空")
             @Email(message = "邮箱格式不正确")
             @RequestParam("mail") String mail){
-        return registerService.sendMailCode(mail);
+        return Result.load(registerService.sendMailCode(mail));
     }
 
     @PostMapping("/register")
     public Result register(@Valid @RequestBody RegisterDto registerDto){
-        return registerService.register(registerDto);
+        int res=registerService.register(registerDto);
+        if(res==0){
+            return Result.failure("验证码错误");
+        }
+        if(res==1){
+            return Result.failure("注册失败");
+        }
+        return Result.success("注册成功");
     }
 
 }

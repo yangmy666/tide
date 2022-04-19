@@ -12,7 +12,7 @@ const instance = axios.create({
 
 //请求拦截器
 instance.interceptors.request.use(request=>{
-    //携带token
+    //从localStorage携带token
     const token=localStorage.getItem('access-token')
     if(token!=null){
         request.headers={

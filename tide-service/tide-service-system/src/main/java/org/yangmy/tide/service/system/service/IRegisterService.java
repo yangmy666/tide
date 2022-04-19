@@ -1,6 +1,5 @@
 package org.yangmy.tide.service.system.service;
 
-import org.yangmy.tide.common.result.Result;
 import org.yangmy.tide.service.system.entity.dto.RegisterDto;
 
 /**
@@ -9,7 +8,7 @@ import org.yangmy.tide.service.system.entity.dto.RegisterDto;
  */
 public interface IRegisterService {
 
-    Result sendMailCode(String mail);
+    int sendMailCode(String mail);
 
-    Result register(RegisterDto registerDto);
+    int register(RegisterDto registerDto);
 }
